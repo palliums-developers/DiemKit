@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,12 @@
 		36178349243F448A003C6588 /* StructTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178335243F448A003C6588 /* StructTag.swift */; };
 		3617834A243F448A003C6588 /* LibraNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178336243F448A003C6588 /* LibraNetwork.swift */; };
 		3617834B243F448A003C6588 /* LibraUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178337243F448A003C6588 /* LibraUtils.swift */; };
+		36178354243F47F6003C6588 /* ed25519_fe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617834E243F47F6003C6588 /* ed25519_fe.swift */; };
+		36178355243F47F6003C6588 /* ed25519_verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617834F243F47F6003C6588 /* ed25519_verify.swift */; };
+		36178356243F47F6003C6588 /* ed25519_sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178350243F47F6003C6588 /* ed25519_sign.swift */; };
+		36178357243F47F6003C6588 /* ed25519_ge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178351243F47F6003C6588 /* ed25519_ge.swift */; };
+		36178358243F47F6003C6588 /* ed25519_utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178352243F47F6003C6588 /* ed25519_utility.swift */; };
+		36178359243F47F6003C6588 /* ed25519_sc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178353243F47F6003C6588 /* ed25519_sc.swift */; };
 		605A023EFDF77356DF7171D8 /* Pods_LibraKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EFA901BEDF2FCCE5BD98EF /* Pods_LibraKitTests.framework */; };
 		9D25F70F2338D01200C6D256 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D25F70E2338D01200C6D256 /* SwiftUIView.swift */; };
 		9D96752B2333572800710B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96752A2333572800710B21 /* AppDelegate.swift */; };
@@ -78,6 +84,12 @@
 		36178335243F448A003C6588 /* StructTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructTag.swift; sourceTree = "<group>"; };
 		36178336243F448A003C6588 /* LibraNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraNetwork.swift; sourceTree = "<group>"; };
 		36178337243F448A003C6588 /* LibraUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraUtils.swift; sourceTree = "<group>"; };
+		3617834E243F47F6003C6588 /* ed25519_fe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_fe.swift; sourceTree = "<group>"; };
+		3617834F243F47F6003C6588 /* ed25519_verify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_verify.swift; sourceTree = "<group>"; };
+		36178350243F47F6003C6588 /* ed25519_sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_sign.swift; sourceTree = "<group>"; };
+		36178351243F47F6003C6588 /* ed25519_ge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_ge.swift; sourceTree = "<group>"; };
+		36178352243F47F6003C6588 /* ed25519_utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_utility.swift; sourceTree = "<group>"; };
+		36178353243F47F6003C6588 /* ed25519_sc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_sc.swift; sourceTree = "<group>"; };
 		5E7F0A23CE5B043825A6AC7B /* Pods-LibraKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraKit.release.xcconfig"; path = "Target Support Files/Pods-LibraKit/Pods-LibraKit.release.xcconfig"; sourceTree = "<group>"; };
 		64E0ECC2393EE5D8944B3441 /* Pods-LibraKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraKitUITests.debug.xcconfig"; path = "Target Support Files/Pods-LibraKitUITests/Pods-LibraKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6EB65094F2EF96CE609372F5 /* Pods_LibraKitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibraKitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +156,27 @@
 				36178335243F448A003C6588 /* StructTag.swift */,
 			);
 			path = MakeTransaction;
+			sourceTree = "<group>";
+		};
+		3617834C243F47DC003C6588 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				3617834D243F47F6003C6588 /* ED25519 */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		3617834D243F47F6003C6588 /* ED25519 */ = {
+			isa = PBXGroup;
+			children = (
+				3617834E243F47F6003C6588 /* ed25519_fe.swift */,
+				3617834F243F47F6003C6588 /* ed25519_verify.swift */,
+				36178350243F47F6003C6588 /* ed25519_sign.swift */,
+				36178351243F47F6003C6588 /* ed25519_ge.swift */,
+				36178352243F47F6003C6588 /* ed25519_utility.swift */,
+				36178353243F47F6003C6588 /* ed25519_sc.swift */,
+			);
+			path = ED25519;
 			sourceTree = "<group>";
 		};
 		36F42E8C2437C36D00DBBF8F /* LibraKit */ = {
@@ -214,10 +247,11 @@
 		9D9675292333572800710B21 /* LibraKit */ = {
 			isa = PBXGroup;
 			children = (
+				36F42E8C2437C36D00DBBF8F /* LibraKit */,
+				3617834C243F47DC003C6588 /* Vendors */,
 				9D96752A2333572800710B21 /* AppDelegate.swift */,
 				9D96752C2333572800710B21 /* ViewController.swift */,
 				9D25F70E2338D01200C6D256 /* SwiftUIView.swift */,
-				36F42E8C2437C36D00DBBF8F /* LibraKit */,
 				9D96752E2333572800710B21 /* Main.storyboard */,
 				9D9675312333572900710B21 /* Assets.xcassets */,
 				9D9675332333572900710B21 /* LaunchScreen.storyboard */,
@@ -255,6 +289,7 @@
 				9D9675232333572800710B21 /* Sources */,
 				9D9675242333572800710B21 /* Frameworks */,
 				9D9675252333572800710B21 /* Resources */,
+				A3CDC465C4F7312E947B0104 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -440,6 +475,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A3CDC465C4F7312E947B0104 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LibraKit/Pods-LibraKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LibraKit/Pods-LibraKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LibraKit/Pods-LibraKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -447,22 +499,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36178356243F47F6003C6588 /* ed25519_sign.swift in Sources */,
 				36178349243F448A003C6588 /* StructTag.swift in Sources */,
 				36178343243F448A003C6588 /* LibraTypeTag.swift in Sources */,
 				36178348243F448A003C6588 /* TransactionArgument.swift in Sources */,
 				36178344243F448A003C6588 /* LibraTransaction.swift in Sources */,
 				3617833F243F448A003C6588 /* LibraHDWallet.swift in Sources */,
+				36178358243F47F6003C6588 /* ed25519_utility.swift in Sources */,
 				36178339243F448A003C6588 /* LibraHDPublicKey.swift in Sources */,
 				9D96752D2333572800710B21 /* ViewController.swift in Sources */,
+				36178357243F47F6003C6588 /* ed25519_ge.swift in Sources */,
 				36178342243F448A003C6588 /* TransactionAccessPath.swift in Sources */,
 				36178345243F448A003C6588 /* TransactionScript.swift in Sources */,
+				36178355243F47F6003C6588 /* ed25519_verify.swift in Sources */,
 				3617834B243F448A003C6588 /* LibraUtils.swift in Sources */,
 				9D96752B2333572800710B21 /* AppDelegate.swift in Sources */,
 				36178338243F448A003C6588 /* LibraMultiPrivateKey.swift in Sources */,
+				36178354243F47F6003C6588 /* ed25519_fe.swift in Sources */,
 				36178347243F448A003C6588 /* RawTransaction.swift in Sources */,
 				3617833D243F448A003C6588 /* LibraMultiHDWallet.swift in Sources */,
 				3617833C243F448A003C6588 /* LibraHDPrivateKey.swift in Sources */,
 				36178346243F448A003C6588 /* TransactionWriteSet.swift in Sources */,
+				36178359243F47F6003C6588 /* ed25519_sc.swift in Sources */,
 				9D25F70F2338D01200C6D256 /* SwiftUIView.swift in Sources */,
 				3617833E243F448A003C6588 /* LibraCommon.swift in Sources */,
 				3617834A243F448A003C6588 /* LibraNetwork.swift in Sources */,
@@ -575,7 +633,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -630,7 +688,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -648,7 +706,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VRC68UPH8Q;
 				INFOPLIST_FILE = LibraKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -668,7 +726,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VRC68UPH8Q;
 				INFOPLIST_FILE = LibraKit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
