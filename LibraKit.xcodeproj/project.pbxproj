@@ -8,32 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		1CFCEC61ACD42361EF49A542 /* Pods_LibraKitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB65094F2EF96CE609372F5 /* Pods_LibraKitUITests.framework */; };
-		36178338243F448A003C6588 /* LibraMultiPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178323243F4489003C6588 /* LibraMultiPrivateKey.swift */; };
-		36178339243F448A003C6588 /* LibraHDPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178324243F4489003C6588 /* LibraHDPublicKey.swift */; };
-		3617833A243F448A003C6588 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178325243F4489003C6588 /* WordList.swift */; };
-		3617833B243F448A003C6588 /* LibraMnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178326243F448A003C6588 /* LibraMnemonic.swift */; };
-		3617833C243F448A003C6588 /* LibraHDPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178327243F448A003C6588 /* LibraHDPrivateKey.swift */; };
-		3617833D243F448A003C6588 /* LibraMultiHDWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178328243F448A003C6588 /* LibraMultiHDWallet.swift */; };
-		3617833E243F448A003C6588 /* LibraCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178329243F448A003C6588 /* LibraCommon.swift */; };
-		3617833F243F448A003C6588 /* LibraHDWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617832A243F448A003C6588 /* LibraHDWallet.swift */; };
-		36178340243F448A003C6588 /* LibraMultiPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617832B243F448A003C6588 /* LibraMultiPublicKey.swift */; };
-		36178341243F448A003C6588 /* LibraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617832C243F448A003C6588 /* LibraError.swift */; };
-		36178342243F448A003C6588 /* TransactionAccessPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617832E243F448A003C6588 /* TransactionAccessPath.swift */; };
-		36178343243F448A003C6588 /* LibraTypeTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617832F243F448A003C6588 /* LibraTypeTag.swift */; };
-		36178344243F448A003C6588 /* LibraTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178330243F448A003C6588 /* LibraTransaction.swift */; };
-		36178345243F448A003C6588 /* TransactionScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178331243F448A003C6588 /* TransactionScript.swift */; };
-		36178346243F448A003C6588 /* TransactionWriteSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178332243F448A003C6588 /* TransactionWriteSet.swift */; };
-		36178347243F448A003C6588 /* RawTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178333243F448A003C6588 /* RawTransaction.swift */; };
-		36178348243F448A003C6588 /* TransactionArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178334243F448A003C6588 /* TransactionArgument.swift */; };
-		36178349243F448A003C6588 /* StructTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178335243F448A003C6588 /* StructTag.swift */; };
-		3617834A243F448A003C6588 /* LibraNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178336243F448A003C6588 /* LibraNetwork.swift */; };
-		3617834B243F448A003C6588 /* LibraUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178337243F448A003C6588 /* LibraUtils.swift */; };
 		36178354243F47F6003C6588 /* ed25519_fe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617834E243F47F6003C6588 /* ed25519_fe.swift */; };
 		36178355243F47F6003C6588 /* ed25519_verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617834F243F47F6003C6588 /* ed25519_verify.swift */; };
 		36178356243F47F6003C6588 /* ed25519_sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178350243F47F6003C6588 /* ed25519_sign.swift */; };
 		36178357243F47F6003C6588 /* ed25519_ge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178351243F47F6003C6588 /* ed25519_ge.swift */; };
 		36178358243F47F6003C6588 /* ed25519_utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178352243F47F6003C6588 /* ed25519_utility.swift */; };
 		36178359243F47F6003C6588 /* ed25519_sc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36178353243F47F6003C6588 /* ed25519_sc.swift */; };
+		361783932444A0C5003C6588 /* LibraError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361783782444A0C5003C6588 /* LibraError.swift */; };
+		361783942444A0C5003C6588 /* LibraMultiPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617837A2444A0C5003C6588 /* LibraMultiPrivateKey.swift */; };
+		361783952444A0C5003C6588 /* LibraMultiPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617837B2444A0C5003C6588 /* LibraMultiPublicKey.swift */; };
+		361783962444A0C5003C6588 /* LibraMultiHDWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617837C2444A0C5003C6588 /* LibraMultiHDWallet.swift */; };
+		361783972444A0C5003C6588 /* LibraTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617837E2444A0C5003C6588 /* LibraTransaction.swift */; };
+		361783982444A0C5003C6588 /* LibraTransactionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361783802444A0C5003C6588 /* LibraTransactionModule.swift */; };
+		361783992444A0C5003C6588 /* LibraTypeTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361783822444A0C5003C6588 /* LibraTypeTag.swift */; };
+		3617839A2444A0C5003C6588 /* LibraTransactionScript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361783832444A0C5003C6588 /* LibraTransactionScript.swift */; };
+		3617839B2444A0C5003C6588 /* LibraTransactionArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361783842444A0C5003C6588 /* LibraTransactionArgument.swift */; };
+		3617839C2444A0C5003C6588 /* LibraStructTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361783852444A0C5003C6588 /* LibraStructTag.swift */; };
+		3617839D2444A0C5003C6588 /* LibraTransactionAccessPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361783872444A0C5003C6588 /* LibraTransactionAccessPath.swift */; };
+		3617839E2444A0C5003C6588 /* LibraTransactionWriteSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361783882444A0C5003C6588 /* LibraTransactionWriteSet.swift */; };
+		3617839F2444A0C5003C6588 /* LibraRawTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361783892444A0C5003C6588 /* LibraRawTransaction.swift */; };
+		361783A02444A0C5003C6588 /* LibraHDPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617838B2444A0C5003C6588 /* LibraHDPrivateKey.swift */; };
+		361783A12444A0C5003C6588 /* LibraHDPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617838C2444A0C5003C6588 /* LibraHDPublicKey.swift */; };
+		361783A22444A0C5003C6588 /* LibraHDWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617838D2444A0C5003C6588 /* LibraHDWallet.swift */; };
+		361783A32444A0C5003C6588 /* LibraUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617838E2444A0C5003C6588 /* LibraUtils.swift */; };
+		361783A42444A0C5003C6588 /* LibraCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617838F2444A0C5003C6588 /* LibraCommon.swift */; };
+		361783A52444A0C5003C6588 /* LibraWordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361783902444A0C5003C6588 /* LibraWordList.swift */; };
+		361783A62444A0C5003C6588 /* LibraNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361783912444A0C5003C6588 /* LibraNetwork.swift */; };
+		361783A72444A0C5003C6588 /* LibraMnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361783922444A0C5003C6588 /* LibraMnemonic.swift */; };
 		605A023EFDF77356DF7171D8 /* Pods_LibraKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EFA901BEDF2FCCE5BD98EF /* Pods_LibraKitTests.framework */; };
 		9D25F70F2338D01200C6D256 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D25F70E2338D01200C6D256 /* SwiftUIView.swift */; };
 		9D96752B2333572800710B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96752A2333572800710B21 /* AppDelegate.swift */; };
@@ -64,32 +65,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		36178323243F4489003C6588 /* LibraMultiPrivateKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraMultiPrivateKey.swift; sourceTree = "<group>"; };
-		36178324243F4489003C6588 /* LibraHDPublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraHDPublicKey.swift; sourceTree = "<group>"; };
-		36178325243F4489003C6588 /* WordList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
-		36178326243F448A003C6588 /* LibraMnemonic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraMnemonic.swift; sourceTree = "<group>"; };
-		36178327243F448A003C6588 /* LibraHDPrivateKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraHDPrivateKey.swift; sourceTree = "<group>"; };
-		36178328243F448A003C6588 /* LibraMultiHDWallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraMultiHDWallet.swift; sourceTree = "<group>"; };
-		36178329243F448A003C6588 /* LibraCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraCommon.swift; sourceTree = "<group>"; };
-		3617832A243F448A003C6588 /* LibraHDWallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraHDWallet.swift; sourceTree = "<group>"; };
-		3617832B243F448A003C6588 /* LibraMultiPublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraMultiPublicKey.swift; sourceTree = "<group>"; };
-		3617832C243F448A003C6588 /* LibraError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraError.swift; sourceTree = "<group>"; };
-		3617832E243F448A003C6588 /* TransactionAccessPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionAccessPath.swift; sourceTree = "<group>"; };
-		3617832F243F448A003C6588 /* LibraTypeTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraTypeTag.swift; sourceTree = "<group>"; };
-		36178330243F448A003C6588 /* LibraTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraTransaction.swift; sourceTree = "<group>"; };
-		36178331243F448A003C6588 /* TransactionScript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionScript.swift; sourceTree = "<group>"; };
-		36178332243F448A003C6588 /* TransactionWriteSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionWriteSet.swift; sourceTree = "<group>"; };
-		36178333243F448A003C6588 /* RawTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RawTransaction.swift; sourceTree = "<group>"; };
-		36178334243F448A003C6588 /* TransactionArgument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionArgument.swift; sourceTree = "<group>"; };
-		36178335243F448A003C6588 /* StructTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructTag.swift; sourceTree = "<group>"; };
-		36178336243F448A003C6588 /* LibraNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraNetwork.swift; sourceTree = "<group>"; };
-		36178337243F448A003C6588 /* LibraUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraUtils.swift; sourceTree = "<group>"; };
 		3617834E243F47F6003C6588 /* ed25519_fe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_fe.swift; sourceTree = "<group>"; };
 		3617834F243F47F6003C6588 /* ed25519_verify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_verify.swift; sourceTree = "<group>"; };
 		36178350243F47F6003C6588 /* ed25519_sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_sign.swift; sourceTree = "<group>"; };
 		36178351243F47F6003C6588 /* ed25519_ge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_ge.swift; sourceTree = "<group>"; };
 		36178352243F47F6003C6588 /* ed25519_utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_utility.swift; sourceTree = "<group>"; };
 		36178353243F47F6003C6588 /* ed25519_sc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_sc.swift; sourceTree = "<group>"; };
+		361783782444A0C5003C6588 /* LibraError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraError.swift; sourceTree = "<group>"; };
+		3617837A2444A0C5003C6588 /* LibraMultiPrivateKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraMultiPrivateKey.swift; sourceTree = "<group>"; };
+		3617837B2444A0C5003C6588 /* LibraMultiPublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraMultiPublicKey.swift; sourceTree = "<group>"; };
+		3617837C2444A0C5003C6588 /* LibraMultiHDWallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraMultiHDWallet.swift; sourceTree = "<group>"; };
+		3617837E2444A0C5003C6588 /* LibraTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraTransaction.swift; sourceTree = "<group>"; };
+		361783802444A0C5003C6588 /* LibraTransactionModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraTransactionModule.swift; sourceTree = "<group>"; };
+		361783822444A0C5003C6588 /* LibraTypeTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraTypeTag.swift; sourceTree = "<group>"; };
+		361783832444A0C5003C6588 /* LibraTransactionScript.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraTransactionScript.swift; sourceTree = "<group>"; };
+		361783842444A0C5003C6588 /* LibraTransactionArgument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraTransactionArgument.swift; sourceTree = "<group>"; };
+		361783852444A0C5003C6588 /* LibraStructTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraStructTag.swift; sourceTree = "<group>"; };
+		361783872444A0C5003C6588 /* LibraTransactionAccessPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraTransactionAccessPath.swift; sourceTree = "<group>"; };
+		361783882444A0C5003C6588 /* LibraTransactionWriteSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraTransactionWriteSet.swift; sourceTree = "<group>"; };
+		361783892444A0C5003C6588 /* LibraRawTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraRawTransaction.swift; sourceTree = "<group>"; };
+		3617838B2444A0C5003C6588 /* LibraHDPrivateKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraHDPrivateKey.swift; sourceTree = "<group>"; };
+		3617838C2444A0C5003C6588 /* LibraHDPublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraHDPublicKey.swift; sourceTree = "<group>"; };
+		3617838D2444A0C5003C6588 /* LibraHDWallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraHDWallet.swift; sourceTree = "<group>"; };
+		3617838E2444A0C5003C6588 /* LibraUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraUtils.swift; sourceTree = "<group>"; };
+		3617838F2444A0C5003C6588 /* LibraCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraCommon.swift; sourceTree = "<group>"; };
+		361783902444A0C5003C6588 /* LibraWordList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraWordList.swift; sourceTree = "<group>"; };
+		361783912444A0C5003C6588 /* LibraNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraNetwork.swift; sourceTree = "<group>"; };
+		361783922444A0C5003C6588 /* LibraMnemonic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraMnemonic.swift; sourceTree = "<group>"; };
 		5E7F0A23CE5B043825A6AC7B /* Pods-LibraKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraKit.release.xcconfig"; path = "Target Support Files/Pods-LibraKit/Pods-LibraKit.release.xcconfig"; sourceTree = "<group>"; };
 		64E0ECC2393EE5D8944B3441 /* Pods-LibraKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraKitUITests.debug.xcconfig"; path = "Target Support Files/Pods-LibraKitUITests/Pods-LibraKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6EB65094F2EF96CE609372F5 /* Pods_LibraKitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibraKitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,21 +145,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3617832D243F448A003C6588 /* MakeTransaction */ = {
-			isa = PBXGroup;
-			children = (
-				3617832E243F448A003C6588 /* TransactionAccessPath.swift */,
-				3617832F243F448A003C6588 /* LibraTypeTag.swift */,
-				36178330243F448A003C6588 /* LibraTransaction.swift */,
-				36178331243F448A003C6588 /* TransactionScript.swift */,
-				36178332243F448A003C6588 /* TransactionWriteSet.swift */,
-				36178333243F448A003C6588 /* RawTransaction.swift */,
-				36178334243F448A003C6588 /* TransactionArgument.swift */,
-				36178335243F448A003C6588 /* StructTag.swift */,
-			);
-			path = MakeTransaction;
-			sourceTree = "<group>";
-		};
 		3617834C243F47DC003C6588 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,22 +166,78 @@
 			path = ED25519;
 			sourceTree = "<group>";
 		};
+		361783792444A0C5003C6588 /* LibraMultiHDWallet */ = {
+			isa = PBXGroup;
+			children = (
+				3617837A2444A0C5003C6588 /* LibraMultiPrivateKey.swift */,
+				3617837B2444A0C5003C6588 /* LibraMultiPublicKey.swift */,
+				3617837C2444A0C5003C6588 /* LibraMultiHDWallet.swift */,
+			);
+			path = LibraMultiHDWallet;
+			sourceTree = "<group>";
+		};
+		3617837D2444A0C5003C6588 /* MakeTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				361783892444A0C5003C6588 /* LibraRawTransaction.swift */,
+				3617837E2444A0C5003C6588 /* LibraTransaction.swift */,
+				3617837F2444A0C5003C6588 /* Module */,
+				361783812444A0C5003C6588 /* Script */,
+				361783862444A0C5003C6588 /* WriteSet */,
+			);
+			path = MakeTransaction;
+			sourceTree = "<group>";
+		};
+		3617837F2444A0C5003C6588 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				361783802444A0C5003C6588 /* LibraTransactionModule.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		361783812444A0C5003C6588 /* Script */ = {
+			isa = PBXGroup;
+			children = (
+				361783822444A0C5003C6588 /* LibraTypeTag.swift */,
+				361783832444A0C5003C6588 /* LibraTransactionScript.swift */,
+				361783842444A0C5003C6588 /* LibraTransactionArgument.swift */,
+				361783852444A0C5003C6588 /* LibraStructTag.swift */,
+			);
+			path = Script;
+			sourceTree = "<group>";
+		};
+		361783862444A0C5003C6588 /* WriteSet */ = {
+			isa = PBXGroup;
+			children = (
+				361783872444A0C5003C6588 /* LibraTransactionAccessPath.swift */,
+				361783882444A0C5003C6588 /* LibraTransactionWriteSet.swift */,
+			);
+			path = WriteSet;
+			sourceTree = "<group>";
+		};
+		3617838A2444A0C5003C6588 /* LibraHDWallet */ = {
+			isa = PBXGroup;
+			children = (
+				3617838B2444A0C5003C6588 /* LibraHDPrivateKey.swift */,
+				3617838C2444A0C5003C6588 /* LibraHDPublicKey.swift */,
+				3617838D2444A0C5003C6588 /* LibraHDWallet.swift */,
+			);
+			path = LibraHDWallet;
+			sourceTree = "<group>";
+		};
 		36F42E8C2437C36D00DBBF8F /* LibraKit */ = {
 			isa = PBXGroup;
 			children = (
-				36178329243F448A003C6588 /* LibraCommon.swift */,
-				3617832C243F448A003C6588 /* LibraError.swift */,
-				36178327243F448A003C6588 /* LibraHDPrivateKey.swift */,
-				36178324243F4489003C6588 /* LibraHDPublicKey.swift */,
-				3617832A243F448A003C6588 /* LibraHDWallet.swift */,
-				36178326243F448A003C6588 /* LibraMnemonic.swift */,
-				36178328243F448A003C6588 /* LibraMultiHDWallet.swift */,
-				36178323243F4489003C6588 /* LibraMultiPrivateKey.swift */,
-				3617832B243F448A003C6588 /* LibraMultiPublicKey.swift */,
-				36178336243F448A003C6588 /* LibraNetwork.swift */,
-				36178337243F448A003C6588 /* LibraUtils.swift */,
-				3617832D243F448A003C6588 /* MakeTransaction */,
-				36178325243F4489003C6588 /* WordList.swift */,
+				3617838A2444A0C5003C6588 /* LibraHDWallet */,
+				361783792444A0C5003C6588 /* LibraMultiHDWallet */,
+				3617837D2444A0C5003C6588 /* MakeTransaction */,
+				3617838F2444A0C5003C6588 /* LibraCommon.swift */,
+				361783782444A0C5003C6588 /* LibraError.swift */,
+				361783922444A0C5003C6588 /* LibraMnemonic.swift */,
+				361783912444A0C5003C6588 /* LibraNetwork.swift */,
+				3617838E2444A0C5003C6588 /* LibraUtils.swift */,
+				361783902444A0C5003C6588 /* LibraWordList.swift */,
 			);
 			path = LibraKit;
 			sourceTree = "<group>";
@@ -499,35 +542,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3617839D2444A0C5003C6588 /* LibraTransactionAccessPath.swift in Sources */,
 				36178356243F47F6003C6588 /* ed25519_sign.swift in Sources */,
-				36178349243F448A003C6588 /* StructTag.swift in Sources */,
-				36178343243F448A003C6588 /* LibraTypeTag.swift in Sources */,
-				36178348243F448A003C6588 /* TransactionArgument.swift in Sources */,
-				36178344243F448A003C6588 /* LibraTransaction.swift in Sources */,
-				3617833F243F448A003C6588 /* LibraHDWallet.swift in Sources */,
+				361783932444A0C5003C6588 /* LibraError.swift in Sources */,
+				361783A02444A0C5003C6588 /* LibraHDPrivateKey.swift in Sources */,
+				361783982444A0C5003C6588 /* LibraTransactionModule.swift in Sources */,
+				361783A42444A0C5003C6588 /* LibraCommon.swift in Sources */,
 				36178358243F47F6003C6588 /* ed25519_utility.swift in Sources */,
-				36178339243F448A003C6588 /* LibraHDPublicKey.swift in Sources */,
+				361783962444A0C5003C6588 /* LibraMultiHDWallet.swift in Sources */,
+				361783A12444A0C5003C6588 /* LibraHDPublicKey.swift in Sources */,
+				361783992444A0C5003C6588 /* LibraTypeTag.swift in Sources */,
+				361783A22444A0C5003C6588 /* LibraHDWallet.swift in Sources */,
 				9D96752D2333572800710B21 /* ViewController.swift in Sources */,
+				361783942444A0C5003C6588 /* LibraMultiPrivateKey.swift in Sources */,
+				361783A32444A0C5003C6588 /* LibraUtils.swift in Sources */,
 				36178357243F47F6003C6588 /* ed25519_ge.swift in Sources */,
-				36178342243F448A003C6588 /* TransactionAccessPath.swift in Sources */,
-				36178345243F448A003C6588 /* TransactionScript.swift in Sources */,
+				3617839C2444A0C5003C6588 /* LibraStructTag.swift in Sources */,
+				361783A52444A0C5003C6588 /* LibraWordList.swift in Sources */,
+				3617839A2444A0C5003C6588 /* LibraTransactionScript.swift in Sources */,
+				361783A72444A0C5003C6588 /* LibraMnemonic.swift in Sources */,
+				361783A62444A0C5003C6588 /* LibraNetwork.swift in Sources */,
+				3617839F2444A0C5003C6588 /* LibraRawTransaction.swift in Sources */,
+				3617839B2444A0C5003C6588 /* LibraTransactionArgument.swift in Sources */,
 				36178355243F47F6003C6588 /* ed25519_verify.swift in Sources */,
-				3617834B243F448A003C6588 /* LibraUtils.swift in Sources */,
+				3617839E2444A0C5003C6588 /* LibraTransactionWriteSet.swift in Sources */,
 				9D96752B2333572800710B21 /* AppDelegate.swift in Sources */,
-				36178338243F448A003C6588 /* LibraMultiPrivateKey.swift in Sources */,
 				36178354243F47F6003C6588 /* ed25519_fe.swift in Sources */,
-				36178347243F448A003C6588 /* RawTransaction.swift in Sources */,
-				3617833D243F448A003C6588 /* LibraMultiHDWallet.swift in Sources */,
-				3617833C243F448A003C6588 /* LibraHDPrivateKey.swift in Sources */,
-				36178346243F448A003C6588 /* TransactionWriteSet.swift in Sources */,
+				361783952444A0C5003C6588 /* LibraMultiPublicKey.swift in Sources */,
 				36178359243F47F6003C6588 /* ed25519_sc.swift in Sources */,
 				9D25F70F2338D01200C6D256 /* SwiftUIView.swift in Sources */,
-				3617833E243F448A003C6588 /* LibraCommon.swift in Sources */,
-				3617834A243F448A003C6588 /* LibraNetwork.swift in Sources */,
-				36178340243F448A003C6588 /* LibraMultiPublicKey.swift in Sources */,
-				3617833B243F448A003C6588 /* LibraMnemonic.swift in Sources */,
-				3617833A243F448A003C6588 /* WordList.swift in Sources */,
-				36178341243F448A003C6588 /* LibraError.swift in Sources */,
+				361783972444A0C5003C6588 /* LibraTransaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

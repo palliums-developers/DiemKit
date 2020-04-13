@@ -42,6 +42,3 @@ struct LibraHDPublicKey {
         return tempAddress
     }
 }
-extension LibraHDPublicKey {
-    
-}
