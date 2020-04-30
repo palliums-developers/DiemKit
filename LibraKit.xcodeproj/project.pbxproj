@@ -34,6 +34,7 @@
 		36697FFE2446F47A002EF131 /* LibraNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36697FE92446F47A002EF131 /* LibraNetwork.swift */; };
 		36697FFF2446F47A002EF131 /* LibraWordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36697FEA2446F47A002EF131 /* LibraWordList.swift */; };
 		366980002446F47A002EF131 /* LibraCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36697FEB2446F47A002EF131 /* LibraCommon.swift */; };
+		369D3CA42451CE4E00D7D10E /* LibraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D3CA32451CE4E00D7D10E /* LibraManager.swift */; };
 		605A023EFDF77356DF7171D8 /* Pods_LibraKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EFA901BEDF2FCCE5BD98EF /* Pods_LibraKitTests.framework */; };
 		9D25F70F2338D01200C6D256 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D25F70E2338D01200C6D256 /* SwiftUIView.swift */; };
 		9D96752B2333572800710B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96752A2333572800710B21 /* AppDelegate.swift */; };
@@ -90,6 +91,7 @@
 		36697FE92446F47A002EF131 /* LibraNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraNetwork.swift; sourceTree = "<group>"; };
 		36697FEA2446F47A002EF131 /* LibraWordList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraWordList.swift; sourceTree = "<group>"; };
 		36697FEB2446F47A002EF131 /* LibraCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraCommon.swift; sourceTree = "<group>"; };
+		369D3CA32451CE4E00D7D10E /* LibraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraManager.swift; sourceTree = "<group>"; };
 		5E7F0A23CE5B043825A6AC7B /* Pods-LibraKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraKit.release.xcconfig"; path = "Target Support Files/Pods-LibraKit/Pods-LibraKit.release.xcconfig"; sourceTree = "<group>"; };
 		64E0ECC2393EE5D8944B3441 /* Pods-LibraKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraKitUITests.debug.xcconfig"; path = "Target Support Files/Pods-LibraKitUITests/Pods-LibraKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6EB65094F2EF96CE609372F5 /* Pods_LibraKitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibraKitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,6 +294,7 @@
 				9D96752A2333572800710B21 /* AppDelegate.swift */,
 				9D96752C2333572800710B21 /* ViewController.swift */,
 				9D25F70E2338D01200C6D256 /* SwiftUIView.swift */,
+				369D3CA32451CE4E00D7D10E /* LibraManager.swift */,
 				9D96752E2333572800710B21 /* Main.storyboard */,
 				9D9675312333572900710B21 /* Assets.xcassets */,
 				9D9675332333572900710B21 /* LaunchScreen.storyboard */,
@@ -553,6 +556,7 @@
 				36178358243F47F6003C6588 /* ed25519_utility.swift in Sources */,
 				36697FF32446F47A002EF131 /* LibraHDWallet.swift in Sources */,
 				36697FF92446F47A002EF131 /* LibraTransactionArgument.swift in Sources */,
+				369D3CA42451CE4E00D7D10E /* LibraManager.swift in Sources */,
 				36697FF72446F47A002EF131 /* LibraTypeTag.swift in Sources */,
 				36697FF82446F47A002EF131 /* LibraTransactionScript.swift in Sources */,
 				9D96752D2333572800710B21 /* ViewController.swift in Sources */,

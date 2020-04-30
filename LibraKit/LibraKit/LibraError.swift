@@ -7,7 +7,17 @@
 //
 
 import UIKit
-
+public enum LibraKitError: Error {
+    case error(String)
+}
+extension LibraKitError: LocalizedError {
+    public var errorDescription: String? {
+        switch self {
+        case .error(let string):
+            return "\(string)"
+        }
+    }
+}
 struct LibraError {
 
 }
