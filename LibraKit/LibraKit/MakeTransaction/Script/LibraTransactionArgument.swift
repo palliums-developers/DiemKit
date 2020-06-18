@@ -47,7 +47,7 @@ struct LibraTransactionArgument {
         result += self.code.raw
         switch self.code {
         case .U8:
-            result += LibraUtils.getLengthData(length: Int(self.value)!, appendBytesCount: 8)
+            result += LibraUtils.getLengthData(length: Int(self.value)!, appendBytesCount: 1)
         case .U64:
             result += LibraUtils.getLengthData(length: Int(self.value)!, appendBytesCount: 8)
         case .U128:
