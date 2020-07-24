@@ -8,12 +8,13 @@
 
 import Foundation
 import BigInt
-struct WCDataModel {
-    var from: String?
-    var receive: String?
-    var amount: Int64?
-}
 struct LibraManager {
+    struct WCDataModel {
+        var from: String
+        var receive: String
+        var amount: Int64
+        var module: String
+    }
     /// 获取助词数组
     ///
     /// - Returns: 助词数组
@@ -85,8 +86,6 @@ extension LibraManager {
             let wallet = try LibraManager.getWallet(mnemonic: mnemonic)
             let (_, address) = try LibraManager.splitAddress(address: receiveAddress)
             // 拼接交易
-            //            let argument0 = LibraTransactionArgument.init(code: .U8Vector,
-            //                                                          value: "")
             let argument0 = LibraTransactionArgument.init(code: .Address,
                                                           value: address)
             let argument1 = LibraTransactionArgument.init(code: .U64,
@@ -97,16 +96,17 @@ extension LibraManager {
             // metadata_signature
             let argument3 = LibraTransactionArgument.init(code: .U8Vector,
                                                           value: "")
-            let script = LibraTransactionScript.init(code: Data.init(hex: LibraScriptCodeWithData),
-                                                     typeTags: [LibraTypeTag.init(structData: LibraStructTag.init(type: .Normal(module)))],
-                                                     argruments: [argument0, argument1, argument2, argument3])
+            let script = LibraTransactionScriptPayload.init(code: Data.init(hex: LibraUtils.getMoveCode(name: "peer_to_peer_with_metadata")),
+                                                            typeTags: [LibraTypeTag.init(structData: LibraStructTag.init(type: .Normal(module)))],
+                                                            argruments: [argument0, argument1, argument2, argument3])
             let rawTransaction = LibraRawTransaction.init(senderAddres: sendAddress,
                                                           sequenceNumber: sequenceNumber,
                                                           maxGasAmount: 1000000,
-                                                          gasUnitPrice: 0,
-                                                          expirationTime: Int(UInt64(Date().timeIntervalSince1970) + 3600),
-                                                          payLoad: script.serialize(),
-                                                          module: module)
+                                                          gasUnitPrice: 1,
+                                                          expirationTime: Int(UInt64(Date().timeIntervalSince1970) + 300),
+                                                          payload: script.serialize(),
+                                                          module: module,
+                                                          chainID: 2)
             
             // 签名交易
             let signature = try wallet.privateKey.signTransaction(transaction: rawTransaction, wallet: wallet)
@@ -149,20 +149,21 @@ extension LibraManager {
     ///   - mnemonic: 助记词
     ///   - contact: 合约地址
     ///   - sequenceNumber: 序列码
-    public static func getLibraPublishTokenTransactionHex(mnemonic: [String], sequenceNumber: Int) throws -> String {
+    public static func getPublishTokenTransactionHex(mnemonic: [String], sequenceNumber: Int, module: String) throws -> String {
         do {
             let wallet = try LibraManager.getWallet(mnemonic: mnemonic)
             // 拼接交易
-            let script = LibraTransactionScript.init(code: Data.init(hex: LibraPublishScriptCode),
-                                                     typeTags: [LibraTypeTag.init(structData: LibraStructTag.init(type: .Normal("LBR")))],
-                                                     argruments: [])
+            let script = LibraTransactionScriptPayload.init(code: Data.init(hex: LibraUtils.getMoveCode(name: "add_currency_to_account")),
+                                                            typeTags: [LibraTypeTag.init(structData: LibraStructTag.init(type: .Normal(module)))],
+                                                            argruments: [])
             let rawTransaction = LibraRawTransaction.init(senderAddres: wallet.publicKey.toLegacy(),
                                                           sequenceNumber: sequenceNumber,
                                                           maxGasAmount: 400000,
                                                           gasUnitPrice: 0,
-                                                          expirationTime: Int(UInt64(Date().timeIntervalSince1970) + 3600),
-                                                          payLoad: script.serialize(),
-                                                          module: "LBR")
+                                                          expirationTime: Int(UInt64(Date().timeIntervalSince1970) + 300),
+                                                          payload: script.serialize(),
+                                                          module: "LBR",
+                                                          chainID: 2)
             // 签名交易
             let signature = try wallet.privateKey.signTransaction(transaction: rawTransaction, wallet: wallet)
             return signature.toHexString()
@@ -172,42 +173,33 @@ extension LibraManager {
     }
 }
 extension LibraManager {
-    /// 获取Libra映射VLibra交易Hex
-    /// - Parameters:
-    ///   - sendAddress: 发送地址
-    ///   - amount: 数量
-    ///   - fee: 手续费
-    ///   - mnemonic: 助记词
-    ///   - contact: 合约
-    ///   - sequenceNumber: 序列码
-    ///   - libraReceiveAddress: 接收地址
-    /// - Throws: 报错
-    /// - Returns: 返回结果
-    public static func getLibraToVLibraTransactionHex(sendAddress: String, amount: Double, fee: Double, mnemonic: [String], sequenceNumber: Int, vlibraReceiveAddress: String, module: String) throws -> String {
+    
+    public static func getLibraToViolasMappingTransactionHex(sendAddress: String, module: String, amountIn: Double, amountOut: Double, fee: Double, mnemonic: [String], sequenceNumber: Int, exchangeCenterAddress: String, violasReceiveAddress: String, feeModule: String, type: String) throws -> String {
         do {
             let wallet = try LibraManager.getWallet(mnemonic: mnemonic)
             // 拼接交易
             let argument0 = LibraTransactionArgument.init(code: .Address,
-                                                          value: "0a82179351b8ecb6c5e68ab7b08622de")
-            let argument1 = LibraTransactionArgument.init(code: .U8Vector,
-                                                          value: "")
-            let argument2 = LibraTransactionArgument.init(code: .U64,
-                                                          value: "\(Int(amount * 1000000))")
-            let data = "{\"flag\":\"libra\",\"type\":\"l2v\",\"to_address\":\"\(vlibraReceiveAddress)\",\"state\":\"start\"}".data(using: .utf8)!
-            let argument3 = LibraTransactionArgument.init(code: .U8Vector,
+                                                          value: exchangeCenterAddress)
+            let argument1 = LibraTransactionArgument.init(code: .U64,
+                                                          value: "\(Int(amountIn * 1000000))")
+            // metadata
+            let data = "{\"flag\":\"libra\",\"type\":\"\(type)\",\"times\": 0, \"to_address\":\"00000000000000000000000000000000\(violasReceiveAddress)\",\"out_amount\":\"\(Int(amountOut * 1000000))\",\"state\":\"start\"}".data(using: .utf8)!
+            let argument2 = LibraTransactionArgument.init(code: .U8Vector,
                                                           value: data.toHexString())
-            
-            let script = LibraTransactionScript.init(code: Data.init(hex: LibraScriptCodeWithData),
-                                                     typeTags: [LibraTypeTag.init(structData: LibraStructTag.init(type: .libraDefault))],
-                                                     argruments: [argument0, argument1, argument2, argument3])
-            
+            // metadata_signature
+            let argument3 = LibraTransactionArgument.init(code: .U8Vector,
+                                                          value: "")
+            let script = LibraTransactionScriptPayload.init(code: Data.init(hex: LibraUtils.getMoveCode(name: "peer_to_peer_with_metadata")),
+                                                            typeTags: [LibraTypeTag.init(structData: LibraStructTag.init(type: .Normal(module)))],
+                                                            argruments: [argument0, argument1, argument2, argument3])
             let rawTransaction = LibraRawTransaction.init(senderAddres: sendAddress,
                                                           sequenceNumber: sequenceNumber,
-                                                          maxGasAmount: 560000,
-                                                          gasUnitPrice: 0,
-                                                          expirationTime: Int(UInt64(Date().timeIntervalSince1970) + 3600),
-                                                          payLoad: script.serialize(),
-                                                          module: module)
+                                                          maxGasAmount: 1000000,
+                                                          gasUnitPrice: 1,
+                                                          expirationTime: Int(UInt64(Date().timeIntervalSince1970) + 300),
+                                                          payload: script.serialize(),
+                                                          module: feeModule,
+                                                          chainID: 2)
             // 签名交易
             let signature = try wallet.privateKey.signTransaction(transaction: rawTransaction, wallet: wallet)
             return signature.toHexString()
@@ -222,7 +214,8 @@ extension LibraManager {
         let txData = Data.init(Array<UInt8>(hex: tx))
         var WCTransferModel = WCDataModel.init(from: "",
                                                receive: "",
-                                               amount: 0)
+                                               amount: 0,
+                                               module: "")
         let (sendAddress, lastData0) = readData(data: txData, count: 16)
         print("sendAddress = \(sendAddress.toHexString())")
         WCTransferModel.from = sendAddress.toHexString()
@@ -240,7 +233,7 @@ extension LibraManager {
         print("codeData = \(codeData.toHexString())")
         let (typeTagCount , lastData5) = getCount(data: lastData4)
         print("typeTagCount = \(typeTagCount)")
-        let lastData6 = readTypeTags(data: lastData5, typeTagCount: typeTagCount)
+        let (lastData6, module) = readTypeTags(data: lastData5, typeTagCount: typeTagCount)
         let (argumentCount, lastData7) = getCount(data: lastData6)
         print("argumentCount = \(argumentCount)")
         let (model, lastData8) = readArgument(data: lastData7, argumentCount: argumentCount)
@@ -248,7 +241,8 @@ extension LibraManager {
         print("success")
         return WCDataModel.init(from: sendAddress.toHexString(),
                                 receive: model.receive,
-                                amount: model.amount)
+                                amount: model.amount,
+                                module: module)
     }
     private static func getCount(data: Data) -> (Int, Data) {
         var nameCountData = [UInt8]()
@@ -274,8 +268,9 @@ extension LibraManager {
         let lastData = data.suffix(data.count - count)
         return (tempData, lastData)
     }
-    private static func readTypeTags(data: Data, typeTagCount: Int) -> (Data) {
+    private static func readTypeTags(data: Data, typeTagCount: Int) -> (Data, String) {
         var resultLastData = data
+        var tempModule = ""
         for _ in 0..<typeTagCount {
             let (type, lastData0) = readData(data: resultLastData, count: 1)
             switch type.toHexString() {
@@ -312,15 +307,16 @@ extension LibraManager {
                 print("TypeParams = \(typeParamsCount)")
                 
                 resultLastData = lastData6
+                tempModule = module
             default:
                 print("invalid")
             }
         }
-        return resultLastData
+        return (resultLastData, tempModule)
     }
     private static func readArgument(data: Data, argumentCount: Int) -> (WCDataModel, Data) {
         var resultLastData = data
-        var model = WCDataModel.init(from: "", receive: "", amount: 0)
+        var model = WCDataModel.init(from: "", receive: "", amount: 0, module: "")
         for _ in 0..<argumentCount {
             let (type, lastData0) = readData(data: resultLastData, count: 1)
             switch type.toHexString() {

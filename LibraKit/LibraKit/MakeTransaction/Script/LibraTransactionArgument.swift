@@ -7,7 +7,7 @@
 //
 
 import Foundation
-enum LibraArgumentsCode {
+enum LibraArgumentCode {
     case U8
     case U64
     case U128
@@ -15,7 +15,7 @@ enum LibraArgumentsCode {
     case U8Vector
     case Bool
 }
-extension LibraArgumentsCode {
+extension LibraArgumentCode {
     public var raw: Data {
         switch self {
         case .U8:
@@ -34,12 +34,13 @@ extension LibraArgumentsCode {
     }
 }
 struct LibraTransactionArgument {
-    fileprivate let code: LibraArgumentsCode
+    fileprivate let code: LibraArgumentCode
     
     fileprivate let value: String
     
-    init(code: LibraArgumentsCode, value: String) {
+    init(code: LibraArgumentCode, value: String) {
         self.code = code
+        
         self.value = value
     }
     func serialize() -> Data {
@@ -51,7 +52,7 @@ struct LibraTransactionArgument {
         case .U64:
             result += LibraUtils.getLengthData(length: Int(self.value)!, appendBytesCount: 8)
         case .U128:
-            result += LibraUtils.getLengthData(length: Int(self.value)!, appendBytesCount: 8)
+            result += LibraUtils.getLengthData(length: Int(self.value)!, appendBytesCount: 16)
         case .Address:
             let data = Data.init(Array<UInt8>(hex: self.value))
             result += data
