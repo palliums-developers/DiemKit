@@ -158,9 +158,9 @@
 			children = (
 				363D910324CAEEAD00F6374C /* LibraRawTransaction.swift */,
 				363D910424CAEEAD00F6374C /* LibraTransactionPayload.swift */,
-				363D90F724CAEEAD00F6374C /* Module */,
 				363D90F924CAEEAD00F6374C /* Script */,
 				363D90FE24CAEEAD00F6374C /* WriteSet */,
+				363D90F724CAEEAD00F6374C /* Module */,
 			);
 			path = MakeTransaction;
 			sourceTree = "<group>";
@@ -176,9 +176,9 @@
 		363D90F924CAEEAD00F6374C /* Script */ = {
 			isa = PBXGroup;
 			children = (
-				363D90FA24CAEEAD00F6374C /* LibraTypeTag.swift */,
 				363D90FB24CAEEAD00F6374C /* LibraTransactionScriptPayload.swift */,
 				363D90FC24CAEEAD00F6374C /* LibraTransactionArgument.swift */,
+				363D90FA24CAEEAD00F6374C /* LibraTypeTag.swift */,
 				363D90FD24CAEEAD00F6374C /* LibraStructTag.swift */,
 			);
 			path = Script;
@@ -198,9 +198,9 @@
 		363D910524CAEEAD00F6374C /* LibraHDWallet */ = {
 			isa = PBXGroup;
 			children = (
+				363D910824CAEEAD00F6374C /* LibraHDWallet.swift */,
 				363D910624CAEEAD00F6374C /* LibraHDPrivateKey.swift */,
 				363D910724CAEEAD00F6374C /* LibraHDPublicKey.swift */,
-				363D910824CAEEAD00F6374C /* LibraHDWallet.swift */,
 			);
 			path = LibraHDWallet;
 			sourceTree = "<group>";
@@ -208,9 +208,9 @@
 		363D910924CAEEAD00F6374C /* LibraMultiHDWallet */ = {
 			isa = PBXGroup;
 			children = (
+				363D910C24CAEEAD00F6374C /* LibraMultiHDWallet.swift */,
 				363D910A24CAEEAD00F6374C /* LibraMultiPrivateKey.swift */,
 				363D910B24CAEEAD00F6374C /* LibraMultiPublicKey.swift */,
-				363D910C24CAEEAD00F6374C /* LibraMultiHDWallet.swift */,
 			);
 			path = LibraMultiHDWallet;
 			sourceTree = "<group>";
