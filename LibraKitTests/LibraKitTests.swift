@@ -9,6 +9,7 @@
 import XCTest
 import CryptoSwift
 import BigInt
+
 @testable import LibraKit
 class LibraSDKTests: XCTestCase {
     
@@ -313,5 +314,24 @@ class LibraSDKTests: XCTestCase {
     func testDe() {
         let model = LibraManager.derializeTransaction(tx: "793fdd2c245229230fd52aca841875b3080000000000000002f401a11ceb0b010007014600000002000000034800000011000000045900000004000000055d0000001c00000007790000004900000008c20000001000000009d200000022000000000000010001010100020203000003040101010006020602050a0200010501010405030a020a0205050a02030a020a020109000c4c696272614163636f756e74166372656174655f746573746e65745f6163636f756e74066578697374731d7061795f66726f6d5f73656e6465725f776974685f6d6574616461746100000000000000000000000000000000010105010e000a001101200305000508000a000b0138000a000a020b030b04380102010700000000000000000000000000000000034c42520154000503fa279f2615270daed6061313a48360f704000100e1f505000000000400040040420f00000000000000000000000000034c4252eb27cf5e0000000000200825e33e0e828cb8869cf5ca22bb5360cc5edeba621a1cde8f13ed179ce8135f402f957968ff0d3d2c780ee003dbd23ea38d8dee62a64f2de376eb969a0049fad35e24410031346ef0f22fce5dd50f98511a542ccb95e473ba864d1123ab35630c")
         print(model)
+    }
+    func testLibraBech32() {
+        let payload = Data.init(Array<UInt8>(hex: "f72589b71ff4f8d139674a3f7369c69b")) + Data.init(Array<UInt8>(hex: "cf64428bdeb62af2"))
+        let cashaddr: String = LibraBech32.encode(payload: payload,
+                                                  prefix: "lbr",
+                                                  version: 1,
+                                                  separator: "1")
+        print(cashaddr)
+        XCTAssertEqual(cashaddr, "lbr1p7ujcndcl7nudzwt8fglhx6wxn08kgs5tm6mz4usw5p72t")
+        do {
+            let (prifix, hahah) = try LibraBech32.decode("lbr1p7ujcndcl7nudzwt8fglhx6wxn08kgs5tm6mz4usw5p72t",
+                                                         version: 1,
+                                                         separator: "1")
+            XCTAssertEqual(prifix, "lbr")
+            XCTAssertEqual(hahah.dropLast(8).toHexString(), "f72589b71ff4f8d139674a3f7369c69b")
+        } catch {
+            print(error)
+            XCTFail()
+        }
     }
 }

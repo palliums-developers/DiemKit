@@ -38,6 +38,7 @@
 		363D913624CAEF4300F6374C /* ed25519_ge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363D913024CAEF4300F6374C /* ed25519_ge.swift */; };
 		363D913724CAEF4300F6374C /* ed25519_utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363D913124CAEF4300F6374C /* ed25519_utility.swift */; };
 		363D913824CAEF4300F6374C /* ed25519_sc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363D913224CAEF4300F6374C /* ed25519_sc.swift */; };
+		366AFED22574F9800007AAFC /* LibraBech32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366AFED12574F9800007AAFC /* LibraBech32.swift */; };
 		369D3CA42451CE4E00D7D10E /* LibraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D3CA32451CE4E00D7D10E /* LibraManager.swift */; };
 		605A023EFDF77356DF7171D8 /* Pods_LibraKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EFA901BEDF2FCCE5BD98EF /* Pods_LibraKitTests.framework */; };
 		9D25F70F2338D01200C6D256 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D25F70E2338D01200C6D256 /* SwiftUIView.swift */; };
@@ -99,6 +100,7 @@
 		363D913024CAEF4300F6374C /* ed25519_ge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_ge.swift; sourceTree = "<group>"; };
 		363D913124CAEF4300F6374C /* ed25519_utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_utility.swift; sourceTree = "<group>"; };
 		363D913224CAEF4300F6374C /* ed25519_sc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_sc.swift; sourceTree = "<group>"; };
+		366AFED12574F9800007AAFC /* LibraBech32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraBech32.swift; sourceTree = "<group>"; };
 		369D3CA32451CE4E00D7D10E /* LibraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraManager.swift; sourceTree = "<group>"; };
 		5E7F0A23CE5B043825A6AC7B /* Pods-LibraKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraKit.release.xcconfig"; path = "Target Support Files/Pods-LibraKit/Pods-LibraKit.release.xcconfig"; sourceTree = "<group>"; };
 		64E0ECC2393EE5D8944B3441 /* Pods-LibraKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraKitUITests.debug.xcconfig"; path = "Target Support Files/Pods-LibraKitUITests/Pods-LibraKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				363D910E24CAEEAE00F6374C /* LibraNetwork.swift */,
 				363D910F24CAEEAE00F6374C /* LibraUtils.swift */,
 				363D911024CAEEAE00F6374C /* LibraWordList.swift */,
+				366AFED12574F9800007AAFC /* LibraBech32.swift */,
 				363D911124CAEEAE00F6374C /* LibraContracts.bundle */,
 			);
 			path = LibraKit;
@@ -572,6 +575,7 @@
 				363D913424CAEF4300F6374C /* ed25519_verify.swift in Sources */,
 				363D911B24CAEEAE00F6374C /* LibraAccessPath.swift in Sources */,
 				363D912024CAEEAE00F6374C /* LibraHDPublicKey.swift in Sources */,
+				366AFED22574F9800007AAFC /* LibraBech32.swift in Sources */,
 				363D911C24CAEEAE00F6374C /* LibraContractEvent.swift in Sources */,
 				363D913724CAEF4300F6374C /* ed25519_utility.swift in Sources */,
 				363D911524CAEEAE00F6374C /* LibraTypeTag.swift in Sources */,
