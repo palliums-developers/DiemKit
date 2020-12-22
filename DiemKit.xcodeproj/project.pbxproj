@@ -1,0 +1,989 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CFCEC61ACD42361EF49A542 /* Pods_LibraKitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EB65094F2EF96CE609372F5 /* Pods_LibraKitUITests.framework */; };
+		363D913324CAEF4300F6374C /* ed25519_fe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363D912D24CAEF4300F6374C /* ed25519_fe.swift */; };
+		363D913424CAEF4300F6374C /* ed25519_verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363D912E24CAEF4300F6374C /* ed25519_verify.swift */; };
+		363D913524CAEF4300F6374C /* ed25519_sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363D912F24CAEF4300F6374C /* ed25519_sign.swift */; };
+		363D913624CAEF4300F6374C /* ed25519_ge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363D913024CAEF4300F6374C /* ed25519_ge.swift */; };
+		363D913724CAEF4300F6374C /* ed25519_utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363D913124CAEF4300F6374C /* ed25519_utility.swift */; };
+		363D913824CAEF4300F6374C /* ed25519_sc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363D913224CAEF4300F6374C /* ed25519_sc.swift */; };
+		366352942591E040007D85BF /* DiemWordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663526B2591E040007D85BF /* DiemWordList.swift */; };
+		366352952591E040007D85BF /* DiemUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663526C2591E040007D85BF /* DiemUtils.swift */; };
+		366352962591E040007D85BF /* DiemNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663526D2591E040007D85BF /* DiemNetwork.swift */; };
+		366352972591E040007D85BF /* DiemHDPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663526F2591E040007D85BF /* DiemHDPrivateKey.swift */; };
+		366352982591E040007D85BF /* DiemHDPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352702591E040007D85BF /* DiemHDPublicKey.swift */; };
+		366352992591E040007D85BF /* DiemHDWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352712591E040007D85BF /* DiemHDWallet.swift */; };
+		3663529A2591E040007D85BF /* DiemBech32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352722591E040007D85BF /* DiemBech32.swift */; };
+		3663529B2591E040007D85BF /* DiemMnemonic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352732591E040007D85BF /* DiemMnemonic.swift */; };
+		3663529C2591E040007D85BF /* DiemError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352742591E040007D85BF /* DiemError.swift */; };
+		3663529D2591E040007D85BF /* DiemMultiHDWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352762591E040007D85BF /* DiemMultiHDWallet.swift */; };
+		3663529E2591E040007D85BF /* DiemMultiPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352772591E040007D85BF /* DiemMultiPublicKey.swift */; };
+		3663529F2591E040007D85BF /* DiemMultiPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352782591E040007D85BF /* DiemMultiPrivateKey.swift */; };
+		366352A02591E040007D85BF /* DiemContracts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 366352792591E040007D85BF /* DiemContracts.bundle */; };
+		366352A12591E040007D85BF /* DiemMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663527B2591E040007D85BF /* DiemMetadata.swift */; };
+		366352A22591E040007D85BF /* DiemTravelRuleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663527D2591E040007D85BF /* DiemTravelRuleMetadata.swift */; };
+		366352A32591E040007D85BF /* DiemTravelRuleMetadataV0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663527E2591E040007D85BF /* DiemTravelRuleMetadataV0.swift */; };
+		366352A42591E040007D85BF /* DiemUnstructuredBytesMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352802591E040007D85BF /* DiemUnstructuredBytesMetadata.swift */; };
+		366352A52591E040007D85BF /* DiemGeneralMetadataV0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352822591E040007D85BF /* DiemGeneralMetadataV0.swift */; };
+		366352A62591E040007D85BF /* DiemGeneralMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352832591E040007D85BF /* DiemGeneralMetadata.swift */; };
+		366352A72591E040007D85BF /* DiemRawTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352852591E040007D85BF /* DiemRawTransaction.swift */; };
+		366352A82591E040007D85BF /* DiemTransactionModulePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352872591E040007D85BF /* DiemTransactionModulePayload.swift */; };
+		366352A92591E040007D85BF /* DiemTypeTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352892591E040007D85BF /* DiemTypeTag.swift */; };
+		366352AA2591E040007D85BF /* DiemTransactionScriptPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663528A2591E040007D85BF /* DiemTransactionScriptPayload.swift */; };
+		366352AB2591E040007D85BF /* DiemTransactionArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663528B2591E040007D85BF /* DiemTransactionArgument.swift */; };
+		366352AC2591E040007D85BF /* DiemStructTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663528C2591E040007D85BF /* DiemStructTag.swift */; };
+		366352AD2591E040007D85BF /* DiemTransactionWriteSetPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663528E2591E040007D85BF /* DiemTransactionWriteSetPayload.swift */; };
+		366352AE2591E040007D85BF /* DiemWriteSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663528F2591E040007D85BF /* DiemWriteSet.swift */; };
+		366352AF2591E040007D85BF /* DiemContractEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352902591E040007D85BF /* DiemContractEvent.swift */; };
+		366352B02591E040007D85BF /* DiemAccessPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352912591E040007D85BF /* DiemAccessPath.swift */; };
+		366352B12591E040007D85BF /* DiemTransactionPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352922591E040007D85BF /* DiemTransactionPayload.swift */; };
+		366352B22591E040007D85BF /* DiemCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352932591E040007D85BF /* DiemCommon.swift */; };
+		369D3CA42451CE4E00D7D10E /* DiemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D3CA32451CE4E00D7D10E /* DiemManager.swift */; };
+		605A023EFDF77356DF7171D8 /* Pods_LibraKitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EFA901BEDF2FCCE5BD98EF /* Pods_LibraKitTests.framework */; };
+		9D25F70F2338D01200C6D256 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D25F70E2338D01200C6D256 /* SwiftUIView.swift */; };
+		9D96752B2333572800710B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96752A2333572800710B21 /* AppDelegate.swift */; };
+		9D96752D2333572800710B21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96752C2333572800710B21 /* ViewController.swift */; };
+		9D9675302333572800710B21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D96752E2333572800710B21 /* Main.storyboard */; };
+		9D9675322333572900710B21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D9675312333572900710B21 /* Assets.xcassets */; };
+		9D9675352333572900710B21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D9675332333572900710B21 /* LaunchScreen.storyboard */; };
+		9D9675402333572900710B21 /* LibraKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96753F2333572900710B21 /* LibraKitTests.swift */; };
+		9D96754B2333572900710B21 /* LibraKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96754A2333572900710B21 /* LibraKitUITests.swift */; };
+		E3A3721F71255C792D11105C /* Pods_LibraKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898CD7B3811632609E3A8D49 /* Pods_LibraKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9D96753C2333572900710B21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D96751F2333572800710B21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D9675262333572800710B21;
+			remoteInfo = LibraKit;
+		};
+		9D9675472333572900710B21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D96751F2333572800710B21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D9675262333572800710B21;
+			remoteInfo = LibraKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		363D912D24CAEF4300F6374C /* ed25519_fe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_fe.swift; sourceTree = "<group>"; };
+		363D912E24CAEF4300F6374C /* ed25519_verify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_verify.swift; sourceTree = "<group>"; };
+		363D912F24CAEF4300F6374C /* ed25519_sign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_sign.swift; sourceTree = "<group>"; };
+		363D913024CAEF4300F6374C /* ed25519_ge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_ge.swift; sourceTree = "<group>"; };
+		363D913124CAEF4300F6374C /* ed25519_utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_utility.swift; sourceTree = "<group>"; };
+		363D913224CAEF4300F6374C /* ed25519_sc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ed25519_sc.swift; sourceTree = "<group>"; };
+		3663526B2591E040007D85BF /* DiemWordList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemWordList.swift; sourceTree = "<group>"; };
+		3663526C2591E040007D85BF /* DiemUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemUtils.swift; sourceTree = "<group>"; };
+		3663526D2591E040007D85BF /* DiemNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemNetwork.swift; sourceTree = "<group>"; };
+		3663526F2591E040007D85BF /* DiemHDPrivateKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemHDPrivateKey.swift; sourceTree = "<group>"; };
+		366352702591E040007D85BF /* DiemHDPublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemHDPublicKey.swift; sourceTree = "<group>"; };
+		366352712591E040007D85BF /* DiemHDWallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemHDWallet.swift; sourceTree = "<group>"; };
+		366352722591E040007D85BF /* DiemBech32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemBech32.swift; sourceTree = "<group>"; };
+		366352732591E040007D85BF /* DiemMnemonic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemMnemonic.swift; sourceTree = "<group>"; };
+		366352742591E040007D85BF /* DiemError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemError.swift; sourceTree = "<group>"; };
+		366352762591E040007D85BF /* DiemMultiHDWallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemMultiHDWallet.swift; sourceTree = "<group>"; };
+		366352772591E040007D85BF /* DiemMultiPublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemMultiPublicKey.swift; sourceTree = "<group>"; };
+		366352782591E040007D85BF /* DiemMultiPrivateKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemMultiPrivateKey.swift; sourceTree = "<group>"; };
+		366352792591E040007D85BF /* DiemContracts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DiemContracts.bundle; sourceTree = "<group>"; };
+		3663527B2591E040007D85BF /* DiemMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemMetadata.swift; sourceTree = "<group>"; };
+		3663527D2591E040007D85BF /* DiemTravelRuleMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTravelRuleMetadata.swift; sourceTree = "<group>"; };
+		3663527E2591E040007D85BF /* DiemTravelRuleMetadataV0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTravelRuleMetadataV0.swift; sourceTree = "<group>"; };
+		366352802591E040007D85BF /* DiemUnstructuredBytesMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemUnstructuredBytesMetadata.swift; sourceTree = "<group>"; };
+		366352822591E040007D85BF /* DiemGeneralMetadataV0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemGeneralMetadataV0.swift; sourceTree = "<group>"; };
+		366352832591E040007D85BF /* DiemGeneralMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemGeneralMetadata.swift; sourceTree = "<group>"; };
+		366352852591E040007D85BF /* DiemRawTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemRawTransaction.swift; sourceTree = "<group>"; };
+		366352872591E040007D85BF /* DiemTransactionModulePayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTransactionModulePayload.swift; sourceTree = "<group>"; };
+		366352892591E040007D85BF /* DiemTypeTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTypeTag.swift; sourceTree = "<group>"; };
+		3663528A2591E040007D85BF /* DiemTransactionScriptPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTransactionScriptPayload.swift; sourceTree = "<group>"; };
+		3663528B2591E040007D85BF /* DiemTransactionArgument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTransactionArgument.swift; sourceTree = "<group>"; };
+		3663528C2591E040007D85BF /* DiemStructTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemStructTag.swift; sourceTree = "<group>"; };
+		3663528E2591E040007D85BF /* DiemTransactionWriteSetPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTransactionWriteSetPayload.swift; sourceTree = "<group>"; };
+		3663528F2591E040007D85BF /* DiemWriteSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemWriteSet.swift; sourceTree = "<group>"; };
+		366352902591E040007D85BF /* DiemContractEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemContractEvent.swift; sourceTree = "<group>"; };
+		366352912591E040007D85BF /* DiemAccessPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemAccessPath.swift; sourceTree = "<group>"; };
+		366352922591E040007D85BF /* DiemTransactionPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTransactionPayload.swift; sourceTree = "<group>"; };
+		366352932591E040007D85BF /* DiemCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemCommon.swift; sourceTree = "<group>"; };
+		369D3CA32451CE4E00D7D10E /* DiemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiemManager.swift; sourceTree = "<group>"; };
+		5E7F0A23CE5B043825A6AC7B /* Pods-LibraKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraKit.release.xcconfig"; path = "Target Support Files/Pods-LibraKit/Pods-LibraKit.release.xcconfig"; sourceTree = "<group>"; };
+		64E0ECC2393EE5D8944B3441 /* Pods-LibraKitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraKitUITests.debug.xcconfig"; path = "Target Support Files/Pods-LibraKitUITests/Pods-LibraKitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6EB65094F2EF96CE609372F5 /* Pods_LibraKitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibraKitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F440EB88C0B6A4E6BB73459 /* Pods-LibraKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraKitTests.release.xcconfig"; path = "Target Support Files/Pods-LibraKitTests/Pods-LibraKitTests.release.xcconfig"; sourceTree = "<group>"; };
+		898CD7B3811632609E3A8D49 /* Pods_LibraKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibraKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D1D3B3D4865B07C327E7293 /* Pods-LibraKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraKitTests.debug.xcconfig"; path = "Target Support Files/Pods-LibraKitTests/Pods-LibraKitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D25F70E2338D01200C6D256 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		9D9675272333572800710B21 /* LibraKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibraKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D96752A2333572800710B21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9D96752C2333572800710B21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9D96752F2333572800710B21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D9675312333572900710B21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D9675342333572900710B21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D9675362333572900710B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D96753B2333572900710B21 /* LibraKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibraKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D96753F2333572900710B21 /* LibraKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraKitTests.swift; sourceTree = "<group>"; };
+		9D9675412333572900710B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D9675462333572900710B21 /* LibraKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LibraKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D96754A2333572900710B21 /* LibraKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraKitUITests.swift; sourceTree = "<group>"; };
+		9D96754C2333572900710B21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFDBD5414DB64FD96553041C /* Pods-LibraKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraKit.debug.xcconfig"; path = "Target Support Files/Pods-LibraKit/Pods-LibraKit.debug.xcconfig"; sourceTree = "<group>"; };
+		E16471C42CF8DBA8AB9C981B /* Pods-LibraKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibraKitUITests.release.xcconfig"; path = "Target Support Files/Pods-LibraKitUITests/Pods-LibraKitUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E9EFA901BEDF2FCCE5BD98EF /* Pods_LibraKitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibraKitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D9675242333572800710B21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3A3721F71255C792D11105C /* Pods_LibraKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9675382333572900710B21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				605A023EFDF77356DF7171D8 /* Pods_LibraKitTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9675432333572900710B21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CFCEC61ACD42361EF49A542 /* Pods_LibraKitUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		363D912B24CAEF4300F6374C /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				363D912C24CAEF4300F6374C /* ED25519 */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		363D912C24CAEF4300F6374C /* ED25519 */ = {
+			isa = PBXGroup;
+			children = (
+				363D912D24CAEF4300F6374C /* ed25519_fe.swift */,
+				363D912E24CAEF4300F6374C /* ed25519_verify.swift */,
+				363D912F24CAEF4300F6374C /* ed25519_sign.swift */,
+				363D913024CAEF4300F6374C /* ed25519_ge.swift */,
+				363D913124CAEF4300F6374C /* ed25519_utility.swift */,
+				363D913224CAEF4300F6374C /* ed25519_sc.swift */,
+			);
+			path = ED25519;
+			sourceTree = "<group>";
+		};
+		3663526A2591E040007D85BF /* DiemKit */ = {
+			isa = PBXGroup;
+			children = (
+				3663526E2591E040007D85BF /* DiemHDWallet */,
+				366352752591E040007D85BF /* DiemMultiHDWallet */,
+				3663527A2591E040007D85BF /* Metadata */,
+				366352842591E040007D85BF /* MakeTransaction */,
+				3663526B2591E040007D85BF /* DiemWordList.swift */,
+				3663526C2591E040007D85BF /* DiemUtils.swift */,
+				3663526D2591E040007D85BF /* DiemNetwork.swift */,
+				366352722591E040007D85BF /* DiemBech32.swift */,
+				366352732591E040007D85BF /* DiemMnemonic.swift */,
+				366352742591E040007D85BF /* DiemError.swift */,
+				366352932591E040007D85BF /* DiemCommon.swift */,
+				366352792591E040007D85BF /* DiemContracts.bundle */,
+			);
+			path = DiemKit;
+			sourceTree = "<group>";
+		};
+		3663526E2591E040007D85BF /* DiemHDWallet */ = {
+			isa = PBXGroup;
+			children = (
+				3663526F2591E040007D85BF /* DiemHDPrivateKey.swift */,
+				366352702591E040007D85BF /* DiemHDPublicKey.swift */,
+				366352712591E040007D85BF /* DiemHDWallet.swift */,
+			);
+			path = DiemHDWallet;
+			sourceTree = "<group>";
+		};
+		366352752591E040007D85BF /* DiemMultiHDWallet */ = {
+			isa = PBXGroup;
+			children = (
+				366352762591E040007D85BF /* DiemMultiHDWallet.swift */,
+				366352772591E040007D85BF /* DiemMultiPublicKey.swift */,
+				366352782591E040007D85BF /* DiemMultiPrivateKey.swift */,
+			);
+			path = DiemMultiHDWallet;
+			sourceTree = "<group>";
+		};
+		3663527A2591E040007D85BF /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				3663527B2591E040007D85BF /* DiemMetadata.swift */,
+				3663527C2591E040007D85BF /* LibraTravelRuleMetadata */,
+				3663527F2591E040007D85BF /* LibraUnstructuredBytesMetadata */,
+				366352812591E040007D85BF /* LibraGeneralMetadata */,
+			);
+			path = Metadata;
+			sourceTree = "<group>";
+		};
+		3663527C2591E040007D85BF /* LibraTravelRuleMetadata */ = {
+			isa = PBXGroup;
+			children = (
+				3663527D2591E040007D85BF /* DiemTravelRuleMetadata.swift */,
+				3663527E2591E040007D85BF /* DiemTravelRuleMetadataV0.swift */,
+			);
+			path = LibraTravelRuleMetadata;
+			sourceTree = "<group>";
+		};
+		3663527F2591E040007D85BF /* LibraUnstructuredBytesMetadata */ = {
+			isa = PBXGroup;
+			children = (
+				366352802591E040007D85BF /* DiemUnstructuredBytesMetadata.swift */,
+			);
+			path = LibraUnstructuredBytesMetadata;
+			sourceTree = "<group>";
+		};
+		366352812591E040007D85BF /* LibraGeneralMetadata */ = {
+			isa = PBXGroup;
+			children = (
+				366352822591E040007D85BF /* DiemGeneralMetadataV0.swift */,
+				366352832591E040007D85BF /* DiemGeneralMetadata.swift */,
+			);
+			path = LibraGeneralMetadata;
+			sourceTree = "<group>";
+		};
+		366352842591E040007D85BF /* MakeTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				366352852591E040007D85BF /* DiemRawTransaction.swift */,
+				366352862591E040007D85BF /* Module */,
+				366352882591E040007D85BF /* Script */,
+				3663528D2591E040007D85BF /* WriteSet */,
+				366352922591E040007D85BF /* DiemTransactionPayload.swift */,
+			);
+			path = MakeTransaction;
+			sourceTree = "<group>";
+		};
+		366352862591E040007D85BF /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				366352872591E040007D85BF /* DiemTransactionModulePayload.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		366352882591E040007D85BF /* Script */ = {
+			isa = PBXGroup;
+			children = (
+				366352892591E040007D85BF /* DiemTypeTag.swift */,
+				3663528A2591E040007D85BF /* DiemTransactionScriptPayload.swift */,
+				3663528B2591E040007D85BF /* DiemTransactionArgument.swift */,
+				3663528C2591E040007D85BF /* DiemStructTag.swift */,
+			);
+			path = Script;
+			sourceTree = "<group>";
+		};
+		3663528D2591E040007D85BF /* WriteSet */ = {
+			isa = PBXGroup;
+			children = (
+				3663528E2591E040007D85BF /* DiemTransactionWriteSetPayload.swift */,
+				3663528F2591E040007D85BF /* DiemWriteSet.swift */,
+				366352902591E040007D85BF /* DiemContractEvent.swift */,
+				366352912591E040007D85BF /* DiemAccessPath.swift */,
+			);
+			path = WriteSet;
+			sourceTree = "<group>";
+		};
+		5086504818D0C2F89B7FE900 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				898CD7B3811632609E3A8D49 /* Pods_LibraKit.framework */,
+				E9EFA901BEDF2FCCE5BD98EF /* Pods_LibraKitTests.framework */,
+				6EB65094F2EF96CE609372F5 /* Pods_LibraKitUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63D98737A5B907772EB53A06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BFDBD5414DB64FD96553041C /* Pods-LibraKit.debug.xcconfig */,
+				5E7F0A23CE5B043825A6AC7B /* Pods-LibraKit.release.xcconfig */,
+				8D1D3B3D4865B07C327E7293 /* Pods-LibraKitTests.debug.xcconfig */,
+				6F440EB88C0B6A4E6BB73459 /* Pods-LibraKitTests.release.xcconfig */,
+				64E0ECC2393EE5D8944B3441 /* Pods-LibraKitUITests.debug.xcconfig */,
+				E16471C42CF8DBA8AB9C981B /* Pods-LibraKitUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9D96751E2333572800710B21 = {
+			isa = PBXGroup;
+			children = (
+				9D9675292333572800710B21 /* LibraKit */,
+				9D96753E2333572900710B21 /* LibraKitTests */,
+				9D9675492333572900710B21 /* LibraKitUITests */,
+				9D9675282333572800710B21 /* Products */,
+				63D98737A5B907772EB53A06 /* Pods */,
+				5086504818D0C2F89B7FE900 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9D9675282333572800710B21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D9675272333572800710B21 /* LibraKit.app */,
+				9D96753B2333572900710B21 /* LibraKitTests.xctest */,
+				9D9675462333572900710B21 /* LibraKitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D9675292333572800710B21 /* LibraKit */ = {
+			isa = PBXGroup;
+			children = (
+				363D912B24CAEF4300F6374C /* Vendors */,
+				9D96752A2333572800710B21 /* AppDelegate.swift */,
+				9D96752C2333572800710B21 /* ViewController.swift */,
+				3663526A2591E040007D85BF /* DiemKit */,
+				9D25F70E2338D01200C6D256 /* SwiftUIView.swift */,
+				369D3CA32451CE4E00D7D10E /* DiemManager.swift */,
+				9D96752E2333572800710B21 /* Main.storyboard */,
+				9D9675312333572900710B21 /* Assets.xcassets */,
+				9D9675332333572900710B21 /* LaunchScreen.storyboard */,
+				9D9675362333572900710B21 /* Info.plist */,
+			);
+			path = LibraKit;
+			sourceTree = "<group>";
+		};
+		9D96753E2333572900710B21 /* LibraKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				9D96753F2333572900710B21 /* LibraKitTests.swift */,
+				9D9675412333572900710B21 /* Info.plist */,
+			);
+			path = LibraKitTests;
+			sourceTree = "<group>";
+		};
+		9D9675492333572900710B21 /* LibraKitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9D96754A2333572900710B21 /* LibraKitUITests.swift */,
+				9D96754C2333572900710B21 /* Info.plist */,
+			);
+			path = LibraKitUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D9675262333572800710B21 /* LibraKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D96754F2333572900710B21 /* Build configuration list for PBXNativeTarget "LibraKit" */;
+			buildPhases = (
+				99FDEA26D56996594D16A6AA /* [CP] Check Pods Manifest.lock */,
+				9D9675232333572800710B21 /* Sources */,
+				9D9675242333572800710B21 /* Frameworks */,
+				9D9675252333572800710B21 /* Resources */,
+				A3CDC465C4F7312E947B0104 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LibraKit;
+			productName = LibraKit;
+			productReference = 9D9675272333572800710B21 /* LibraKit.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9D96753A2333572900710B21 /* LibraKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D9675522333572900710B21 /* Build configuration list for PBXNativeTarget "LibraKitTests" */;
+			buildPhases = (
+				22DEFBEBEFF54360971185E4 /* [CP] Check Pods Manifest.lock */,
+				9D9675372333572900710B21 /* Sources */,
+				9D9675382333572900710B21 /* Frameworks */,
+				9D9675392333572900710B21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D96753D2333572900710B21 /* PBXTargetDependency */,
+			);
+			name = LibraKitTests;
+			productName = LibraKitTests;
+			productReference = 9D96753B2333572900710B21 /* LibraKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9D9675452333572900710B21 /* LibraKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D9675552333572900710B21 /* Build configuration list for PBXNativeTarget "LibraKitUITests" */;
+			buildPhases = (
+				1E30964F74C38561AE86254A /* [CP] Check Pods Manifest.lock */,
+				9D9675422333572900710B21 /* Sources */,
+				9D9675432333572900710B21 /* Frameworks */,
+				9D9675442333572900710B21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D9675482333572900710B21 /* PBXTargetDependency */,
+			);
+			name = LibraKitUITests;
+			productName = LibraKitUITests;
+			productReference = 9D9675462333572900710B21 /* LibraKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D96751F2333572800710B21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = palliums;
+				TargetAttributes = {
+					9D9675262333572800710B21 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					9D96753A2333572900710B21 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 9D9675262333572800710B21;
+					};
+					9D9675452333572900710B21 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 9D9675262333572800710B21;
+					};
+				};
+			};
+			buildConfigurationList = 9D9675222333572800710B21 /* Build configuration list for PBXProject "DiemKit" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9D96751E2333572800710B21;
+			productRefGroup = 9D9675282333572800710B21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D9675262333572800710B21 /* LibraKit */,
+				9D96753A2333572900710B21 /* LibraKitTests */,
+				9D9675452333572900710B21 /* LibraKitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D9675252333572800710B21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				366352A02591E040007D85BF /* DiemContracts.bundle in Resources */,
+				9D9675352333572900710B21 /* LaunchScreen.storyboard in Resources */,
+				9D9675322333572900710B21 /* Assets.xcassets in Resources */,
+				9D9675302333572800710B21 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9675392333572900710B21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9675442333572900710B21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E30964F74C38561AE86254A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LibraKitUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22DEFBEBEFF54360971185E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LibraKitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99FDEA26D56996594D16A6AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LibraKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3CDC465C4F7312E947B0104 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LibraKit/Pods-LibraKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LibraKit/Pods-LibraKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LibraKit/Pods-LibraKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D9675232333572800710B21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				366352B12591E040007D85BF /* DiemTransactionPayload.swift in Sources */,
+				366352972591E040007D85BF /* DiemHDPrivateKey.swift in Sources */,
+				366352A32591E040007D85BF /* DiemTravelRuleMetadataV0.swift in Sources */,
+				366352A52591E040007D85BF /* DiemGeneralMetadataV0.swift in Sources */,
+				3663529C2591E040007D85BF /* DiemError.swift in Sources */,
+				366352992591E040007D85BF /* DiemHDWallet.swift in Sources */,
+				366352AB2591E040007D85BF /* DiemTransactionArgument.swift in Sources */,
+				366352AA2591E040007D85BF /* DiemTransactionScriptPayload.swift in Sources */,
+				366352A92591E040007D85BF /* DiemTypeTag.swift in Sources */,
+				3663529E2591E040007D85BF /* DiemMultiPublicKey.swift in Sources */,
+				366352A62591E040007D85BF /* DiemGeneralMetadata.swift in Sources */,
+				363D913524CAEF4300F6374C /* ed25519_sign.swift in Sources */,
+				366352982591E040007D85BF /* DiemHDPublicKey.swift in Sources */,
+				369D3CA42451CE4E00D7D10E /* DiemManager.swift in Sources */,
+				366352952591E040007D85BF /* DiemUtils.swift in Sources */,
+				3663529B2591E040007D85BF /* DiemMnemonic.swift in Sources */,
+				366352B02591E040007D85BF /* DiemAccessPath.swift in Sources */,
+				366352AE2591E040007D85BF /* DiemWriteSet.swift in Sources */,
+				9D96752D2333572800710B21 /* ViewController.swift in Sources */,
+				366352B22591E040007D85BF /* DiemCommon.swift in Sources */,
+				366352AF2591E040007D85BF /* DiemContractEvent.swift in Sources */,
+				366352A42591E040007D85BF /* DiemUnstructuredBytesMetadata.swift in Sources */,
+				3663529D2591E040007D85BF /* DiemMultiHDWallet.swift in Sources */,
+				363D913324CAEF4300F6374C /* ed25519_fe.swift in Sources */,
+				3663529F2591E040007D85BF /* DiemMultiPrivateKey.swift in Sources */,
+				3663529A2591E040007D85BF /* DiemBech32.swift in Sources */,
+				366352962591E040007D85BF /* DiemNetwork.swift in Sources */,
+				366352AD2591E040007D85BF /* DiemTransactionWriteSetPayload.swift in Sources */,
+				363D913424CAEF4300F6374C /* ed25519_verify.swift in Sources */,
+				366352942591E040007D85BF /* DiemWordList.swift in Sources */,
+				363D913724CAEF4300F6374C /* ed25519_utility.swift in Sources */,
+				363D913824CAEF4300F6374C /* ed25519_sc.swift in Sources */,
+				366352AC2591E040007D85BF /* DiemStructTag.swift in Sources */,
+				363D913624CAEF4300F6374C /* ed25519_ge.swift in Sources */,
+				366352A82591E040007D85BF /* DiemTransactionModulePayload.swift in Sources */,
+				9D96752B2333572800710B21 /* AppDelegate.swift in Sources */,
+				366352A22591E040007D85BF /* DiemTravelRuleMetadata.swift in Sources */,
+				366352A12591E040007D85BF /* DiemMetadata.swift in Sources */,
+				9D25F70F2338D01200C6D256 /* SwiftUIView.swift in Sources */,
+				366352A72591E040007D85BF /* DiemRawTransaction.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9675372333572900710B21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D9675402333572900710B21 /* LibraKitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9675422333572900710B21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D96754B2333572900710B21 /* LibraKitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D96753D2333572900710B21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D9675262333572800710B21 /* LibraKit */;
+			targetProxy = 9D96753C2333572900710B21 /* PBXContainerItemProxy */;
+		};
+		9D9675482333572900710B21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D9675262333572800710B21 /* LibraKit */;
+			targetProxy = 9D9675472333572900710B21 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9D96752E2333572800710B21 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D96752F2333572800710B21 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9D9675332333572900710B21 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D9675342333572900710B21 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D96754D2333572900710B21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9D96754E2333572900710B21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D9675502333572900710B21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFDBD5414DB64FD96553041C /* Pods-LibraKit.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VRC68UPH8Q;
+				INFOPLIST_FILE = LibraKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.palliums.LibraKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9D9675512333572900710B21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E7F0A23CE5B043825A6AC7B /* Pods-LibraKit.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VRC68UPH8Q;
+				INFOPLIST_FILE = LibraKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.palliums.LibraKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9D9675532333572900710B21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D1D3B3D4865B07C327E7293 /* Pods-LibraKitTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VRC68UPH8Q;
+				INFOPLIST_FILE = LibraKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.palliums.LibraKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LibraKit.app/LibraKit";
+			};
+			name = Debug;
+		};
+		9D9675542333572900710B21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F440EB88C0B6A4E6BB73459 /* Pods-LibraKitTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VRC68UPH8Q;
+				INFOPLIST_FILE = LibraKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.palliums.LibraKitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LibraKit.app/LibraKit";
+			};
+			name = Release;
+		};
+		9D9675562333572900710B21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64E0ECC2393EE5D8944B3441 /* Pods-LibraKitUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VRC68UPH8Q;
+				INFOPLIST_FILE = LibraKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.palliums.LibraKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LibraKit;
+			};
+			name = Debug;
+		};
+		9D9675572333572900710B21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E16471C42CF8DBA8AB9C981B /* Pods-LibraKitUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VRC68UPH8Q;
+				INFOPLIST_FILE = LibraKitUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.palliums.LibraKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LibraKit;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D9675222333572800710B21 /* Build configuration list for PBXProject "DiemKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D96754D2333572900710B21 /* Debug */,
+				9D96754E2333572900710B21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D96754F2333572900710B21 /* Build configuration list for PBXNativeTarget "LibraKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D9675502333572900710B21 /* Debug */,
+				9D9675512333572900710B21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D9675522333572900710B21 /* Build configuration list for PBXNativeTarget "LibraKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D9675532333572900710B21 /* Debug */,
+				9D9675542333572900710B21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D9675552333572900710B21 /* Build configuration list for PBXNativeTarget "LibraKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D9675562333572900710B21 /* Debug */,
+				9D9675572333572900710B21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D96751F2333572800710B21 /* Project object */;
+}
