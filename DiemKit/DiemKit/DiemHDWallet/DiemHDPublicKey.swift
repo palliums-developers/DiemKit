@@ -12,19 +12,18 @@ import CryptoSwift
 struct DiemHDPublicKey {
     /// 公钥
     let raw: Data
+    /// 钱包网络
+    let network: DiemNetworkState
+    
     /// 初始化公钥对象
     /// - Parameter data: 公钥
-    public init (data: Data) {
+    public init (data: Data, network: DiemNetworkState) {
+        
         self.raw = data
+        
+        self.network = network
     }
-    func toAddress() -> String {
-        let tempData = self.raw + Data.init(hex: "00")
-        let tempAddress = tempData.bytes.sha3(SHA3.Variant.sha256).toHexString()
-        let index = tempAddress.index(tempAddress.startIndex, offsetBy: 32)
-        let address = tempAddress.suffix(from: index)
-        let subStr: String = String(address)
-        return subStr
-    }
+    
     /// 获取传统地址（32位长度）
     /// - Returns: 地址
     func toLegacy() -> String {
@@ -35,9 +34,10 @@ struct DiemHDPublicKey {
         let subStr: String = String(address)
         return subStr
     }
+    
     /// 获取激活地址
     /// - Returns: 地址
-    func toActive() -> String {
+    func toAuthKeyPrefix() -> String {
         let tempData = raw + Data.init(hex: "00")
         let tempAddress = tempData.bytes.sha3(SHA3.Variant.sha256).toHexString()
         let index = tempAddress.index(tempAddress.startIndex, offsetBy: 32)
@@ -46,12 +46,20 @@ struct DiemHDPublicKey {
         return subStr
     }
     
+    /// 获取授权Key
+    /// - Returns: 授权Key
+    func toAuthKey() -> String {
+        let tempData = raw + Data.init(hex: "00")
+        let address = tempData.bytes.sha3(SHA3.Variant.sha256).toHexString()
+        return address
+    }
+    
     /// 获取二维码地址
     /// - Parameters:
     ///   - rootAccount: 是否是默认根账户地址（默认不是）
     ///   - version: 版本（默认为1）
     /// - Returns: 返回地址
-    func toQRAddress(rootAccount: Bool = false, version: UInt8 = 1) -> String {
+    func toBech32Address(rootAccount: Bool = false, version: UInt8 = 1) -> String {
         let tempData = raw + Data.init(hex: "00")
         let tempAddressData = tempData.bytes.sha3(SHA3.Variant.sha256)
         var randomData = Data()
@@ -67,7 +75,7 @@ struct DiemHDPublicKey {
         }
         let payload = tempAddressData.dropFirst(16) + randomData
         let address: String = DiemBech32.encode(payload: Data.init(payload),
-                                                prefix: "dm",
+                                                prefix: self.network.addressPrefix,
                                                 version: version,
                                                 separator: "1")
         return address

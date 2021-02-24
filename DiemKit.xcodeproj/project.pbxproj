@@ -48,6 +48,7 @@
 		366352B12591E040007D85BF /* DiemTransactionPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352922591E040007D85BF /* DiemTransactionPayload.swift */; };
 		366352B22591E040007D85BF /* DiemCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352932591E040007D85BF /* DiemCommon.swift */; };
 		369D3CA42451CE4E00D7D10E /* DiemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D3CA32451CE4E00D7D10E /* DiemManager.swift */; };
+		36C190C625E655FB00EFA4D1 /* ViolasAccountMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C190C525E655FB00EFA4D1 /* ViolasAccountMainModel.swift */; };
 		9D25F70F2338D01200C6D256 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D25F70E2338D01200C6D256 /* SwiftUIView.swift */; };
 		9D96752B2333572800710B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96752A2333572800710B21 /* AppDelegate.swift */; };
 		9D96752D2333572800710B21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96752C2333572800710B21 /* ViewController.swift */; };
@@ -117,6 +118,7 @@
 		366352922591E040007D85BF /* DiemTransactionPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTransactionPayload.swift; sourceTree = "<group>"; };
 		366352932591E040007D85BF /* DiemCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemCommon.swift; sourceTree = "<group>"; };
 		369D3CA32451CE4E00D7D10E /* DiemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiemManager.swift; sourceTree = "<group>"; };
+		36C190C525E655FB00EFA4D1 /* ViolasAccountMainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViolasAccountMainModel.swift; sourceTree = "<group>"; };
 		59A5275ECA44D2B40D53D4C1 /* Pods-DiemKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiemKitTests.debug.xcconfig"; path = "Target Support Files/Pods-DiemKitTests/Pods-DiemKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C8A6CAC67DA60AF8AE2B776 /* Pods-DiemKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiemKitTests.release.xcconfig"; path = "Target Support Files/Pods-DiemKitTests/Pods-DiemKitTests.release.xcconfig"; sourceTree = "<group>"; };
 		7DB4C01199C0FEAAB11DCE5C /* Pods-DiemKitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiemKitUITests.release.xcconfig"; path = "Target Support Files/Pods-DiemKitUITests/Pods-DiemKitUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -271,7 +273,6 @@
 				366352862591E040007D85BF /* Module */,
 				366352882591E040007D85BF /* Script */,
 				3663528D2591E040007D85BF /* WriteSet */,
-				366352922591E040007D85BF /* DiemTransactionPayload.swift */,
 			);
 			path = MakeTransaction;
 			sourceTree = "<group>";
@@ -280,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				366352872591E040007D85BF /* DiemTransactionModulePayload.swift */,
+				366352922591E040007D85BF /* DiemTransactionPayload.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -360,6 +362,7 @@
 				3663526A2591E040007D85BF /* DiemKit */,
 				9D25F70E2338D01200C6D256 /* SwiftUIView.swift */,
 				369D3CA32451CE4E00D7D10E /* DiemManager.swift */,
+				36C190C525E655FB00EFA4D1 /* ViolasAccountMainModel.swift */,
 				9D96752E2333572800710B21 /* Main.storyboard */,
 				9D9675312333572900710B21 /* Assets.xcassets */,
 				9D9675332333572900710B21 /* LaunchScreen.storyboard */,
@@ -643,6 +646,7 @@
 				366352AC2591E040007D85BF /* DiemStructTag.swift in Sources */,
 				363D913624CAEF4300F6374C /* ed25519_ge.swift in Sources */,
 				366352A82591E040007D85BF /* DiemTransactionModulePayload.swift in Sources */,
+				36C190C625E655FB00EFA4D1 /* ViolasAccountMainModel.swift in Sources */,
 				9D96752B2333572800710B21 /* AppDelegate.swift in Sources */,
 				366352A22591E040007D85BF /* DiemTravelRuleMetadata.swift in Sources */,
 				366352A12591E040007D85BF /* DiemMetadata.swift in Sources */,
