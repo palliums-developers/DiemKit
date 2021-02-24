@@ -1,6 +1,6 @@
 //
-//  LibraKitUITests.swift
-//  LibraKitUITests
+//  DiemKitUITests.swift
+//  DiemKitUITests
 //
 //  Created by palliums on 2019/9/19.
 //  Copyright © 2019 palliums. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class LibraKitUITests: XCTestCase {
+class DiemKitUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

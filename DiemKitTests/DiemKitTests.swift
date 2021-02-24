@@ -1,6 +1,6 @@
 //
-//  LibraSDKTests.swift
-//  LibraWalletTests
+//  DiemSDKTests.swift
+//  DiemWalletTests
 //
 //  Created by palliums on 2019/9/5.
 //  Copyright © 2019 palliums. All rights reserved.
@@ -10,8 +10,8 @@ import XCTest
 import CryptoSwift
 import BigInt
 
-@testable import LibraKit
-class LibraSDKTests: XCTestCase {
+@testable import DiemKit
+class DiemSDKTests: XCTestCase {
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -211,9 +211,9 @@ class LibraSDKTests: XCTestCase {
             let seedModel1 = DiemSeedAndDepth.init(seed: seed1, depth: 0, sequence: 0)
             let seedModel2 = DiemSeedAndDepth.init(seed: seed2, depth: 0, sequence: 1)
             let seedModel3 = DiemSeedAndDepth.init(seed: seed3, depth: 0, sequence: 2)
-            let multiPublicKey = DiemMultiPublicKey.init(data: [DiemMultiPublicKeyModel.init(raw: Data.init(Array<UInt8>(hex: "2bd7d9fe82120842daa860606060661b222824c65af7bfb2843eeb7792a3b967")), sequence: 0),
-                                                                DiemMultiPublicKeyModel.init(raw: Data.init(Array<UInt8>(hex: "50b715879a727bbc561786b0dc9e6afcd5d8a443da6eb632952e692b83e8e7cb")), sequence: 1),
-                                                                DiemMultiPublicKeyModel.init(raw: Data.init(Array<UInt8>(hex: "e7e1b22eeb0a9ce0c49e3bf6cf23ebbb4d93d24c2064c46f6ceb9daa6ca2e217")), sequence: 2)],
+            let multiPublicKey = DiemMultiPublicKey.init(data: [DiemMultiPublicKeyModel.init(raw: Data.init(Array<UInt8>(hex: "e12136fd95251348cd993b91e8fbf36bcebe9422842f3c505ca2893f5612ae53")), sequence: 0),
+                                                                DiemMultiPublicKeyModel.init(raw: Data.init(Array<UInt8>(hex: "ee2586aaaeaaa39ae4eb601999e5c2aade701ac4262f79ac98d9413cce67b0db")), sequence: 1),
+                                                                DiemMultiPublicKeyModel.init(raw: Data.init(Array<UInt8>(hex: "d0b27e06a1bf428c380bd10b7469d8b4f251e763724b2543c730abcaea18c8b0")), sequence: 2)],
                                                           threshold: 2)
             let wallet = try DiemMultiHDWallet.init(models: [seedModel1, seedModel3], threshold: 2, multiPublicKey: multiPublicKey)
             //            let wallet = try LibraMultiHDWallet.init(models: [seedModel1, seedModel2, seedModel3], threshold: 2)
