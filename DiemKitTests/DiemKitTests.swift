@@ -37,9 +37,9 @@ class DiemSDKTests: XCTestCase {
         do {
             let seed = try DiemMnemonic.seed(mnemonic: mnemonic)
 //            XCTAssertEqual(seed.toHexString(), "66ae6b767defe3ea0c646f10bf31ad3b36f822064d3923adada7676703a350c0")
-            let testWallet = try DiemHDWallet.init(seed: seed, depth: 0)
+            let testWallet = try DiemHDWallet.init(seed: seed, depth: 0, network: .testnet)
             XCTAssertEqual(testWallet.privateKey.raw.toHexString(), "732bc883893c716f320c01864709ca9f16f8f30342a1de42144bfcc2ddb7af10")
-            let testWallet2 = try DiemHDWallet.init(seed: seed, depth: 1)
+            let testWallet2 = try DiemHDWallet.init(seed: seed, depth: 1, network: .testnet)
             XCTAssertEqual(testWallet2.privateKey.raw.toHexString(), "f6b472bd0941e315d3c34c3ac679d610d2b9e1abe85128752d04bb0f042f3391")
         } catch {
             print(error.localizedDescription)
@@ -49,8 +49,8 @@ class DiemSDKTests: XCTestCase {
         let mnemonic = ["trouble", "menu", "nephew", "group", "alert", "recipe", "hotel", "fatigue", "wet", "shadow", "say", "fold", "huge", "olive", "solution", "enjoy", "garden", "appear", "vague", "joy", "great", "keep", "cactus", "melt"]
         do {
             let seed = try DiemMnemonic.seed(mnemonic: mnemonic)
-            let testWallet = try DiemHDWallet.init(seed: seed, depth: 0)
-            let walletAddress = testWallet.publicKey.toAddress()
+            let testWallet = try DiemHDWallet.init(seed: seed, depth: 0, network: .testnet)
+            let walletAddress = testWallet.publicKey.toLegacy()
             XCTAssertEqual(walletAddress, "6c1dd50f35f120061babc2814cf9378b")
         } catch {
             print(error.localizedDescription)
@@ -59,7 +59,7 @@ class DiemSDKTests: XCTestCase {
     func testLibraKit() {
         //LibraTransactionArgument
         // u64
-        let amount = DiemTransactionArgument.init(code: .U64("9213671392124193148")).serialize().toHexString().uppercased()
+        let amount = DiemTransactionArgument.init(code: .U64(9213671392124193148)).serialize().toHexString().uppercased()
         XCTAssertEqual(amount, "017CC9BDA45089DD7F")
         // Address
         let address = DiemTransactionArgument.init(code: .Address("bafc671e8a38c05706f83b5159bbd8a4")).serialize().toHexString()
@@ -114,7 +114,7 @@ class DiemSDKTests: XCTestCase {
         // LibraTransactionPayload_Script
         let transactionScript = DiemTransactionScriptPayload.init(code: ("move".data(using: .utf8)!),
                                                                    typeTags: [DiemTypeTag](),//
-                                                                   argruments: [DiemTransactionArgument.init(code: .U64("14627357397735030511"))])
+                                                                   argruments: [DiemTransactionArgument.init(code: .U64(14627357397735030511))])
         let transactionScriptPayload = DiemTransactionPayload.init(payload: .script(transactionScript))
         let scriptRaw = DiemRawTransaction.init(senderAddres: "3a24a61e05d129cace9e0efc8bc9e338",
                                                  sequenceNumber: 32,
@@ -148,8 +148,8 @@ class DiemSDKTests: XCTestCase {
         do {
             let seed = try DiemMnemonic.seed(mnemonic: mnemonic)
             
-            let testWallet = try DiemHDWallet.init(seed: seed, depth: 0)
-            let walletAddress = testWallet.publicKey.toAddress()
+            let testWallet = try DiemHDWallet.init(seed: seed, depth: 0, network: .testnet)
+            let walletAddress = testWallet.publicKey.toLegacy()
             
             //            let menmonicString = try KeychainManager.KeyManager.getMnemonicStringFromKeychain(walletAddress: walletAddress)
             //            let mnemonicArray = menmonicString.split(separator: " ").compactMap { (item) -> String in
@@ -193,12 +193,13 @@ class DiemSDKTests: XCTestCase {
         //        print(tempData)
     }
     func testMultiAddress() {
-        let wallet = DiemMultiHDWallet.init(privateKeys: [DiemMultiPrivateKeyModel.init(raw: Data.init(Array<UInt8>(hex: "f3cdd2183629867d6cfa24fb11c58ad515d5a4af014e96c00bb6ba13d3e5f80e")),
-                                                                                         sequence: 1),
-                                                          DiemMultiPrivateKeyModel.init(raw: Data.init(Array<UInt8>(hex: "c973d737cb40bcaf63a45a9736d7d7735e78148a06be185327304d6825e666ea")),
-                                                                                        sequence: 2)],
-                                            threshold: 1)
-        XCTAssertEqual(wallet.publicKey.toLegacy(), "cd35f1a78093554f5dc9c61301f204e4")
+//        let wallet = DiemMultiHDWallet.init(privateKeys: [DiemMultiPrivateKeyModel.init(privateKey: Data.init(Array<UInt8>(hex: "f3cdd2183629867d6cfa24fb11c58ad515d5a4af014e96c00bb6ba13d3e5f80e")),
+//                                                                                         sequence: 1),
+//                                                          DiemMultiPrivateKeyModel.init(privateKey: Data.init(Array<UInt8>(hex: "c973d737cb40bcaf63a45a9736d7d7735e78148a06be185327304d6825e666ea")),
+//                                                                                        sequence: 2)],
+//                                            threshold: 1,
+//                                            network: .testnet)
+//        XCTAssertEqual(wallet.publicKey.toLegacy(), "cd35f1a78093554f5dc9c61301f204e4")
     }
     func testLibraKitMulti() {
         let mnemonic1 = ["display", "paddle", "crush", "crowd", "often", "friend", "topple", "agent", "entry", "use", "begin", "host"]
@@ -214,12 +215,13 @@ class DiemSDKTests: XCTestCase {
             let multiPublicKey = DiemMultiPublicKey.init(data: [DiemMultiPublicKeyModel.init(raw: Data.init(Array<UInt8>(hex: "e12136fd95251348cd993b91e8fbf36bcebe9422842f3c505ca2893f5612ae53")), sequence: 0),
                                                                 DiemMultiPublicKeyModel.init(raw: Data.init(Array<UInt8>(hex: "ee2586aaaeaaa39ae4eb601999e5c2aade701ac4262f79ac98d9413cce67b0db")), sequence: 1),
                                                                 DiemMultiPublicKeyModel.init(raw: Data.init(Array<UInt8>(hex: "d0b27e06a1bf428c380bd10b7469d8b4f251e763724b2543c730abcaea18c8b0")), sequence: 2)],
-                                                          threshold: 2)
-            let wallet = try DiemMultiHDWallet.init(models: [seedModel1, seedModel3], threshold: 2, multiPublicKey: multiPublicKey)
+                                                         threshold: 2,
+                                                         network: .testnet)
+            let wallet = try DiemMultiHDWallet.init(models: [seedModel1, seedModel3], threshold: 2, multiPublicKey: multiPublicKey, network: .testnet)
             //            let wallet = try LibraMultiHDWallet.init(models: [seedModel1, seedModel2, seedModel3], threshold: 2)
             print("Legacy = \(wallet.publicKey.toLegacy())")
             //bafc671e8a38c05706f83b5159bbd8a4
-            print("Authentionkey = \(wallet.publicKey.toActive())")
+            print("Authentionkey = \(wallet.publicKey.toAuthKeyPrefix())")
             //bf2128295b7a57e6e42390d56293760cbafc671e8a38c05706f83b5159bbd8a4
             print("PublicKey = \(wallet.publicKey.toMultiPublicKey().toHexString())")
             //2bd7d9fe82120842daa860606060661b222824c65af7bfb2843eeb7792a3b96750b715879a727bbc561786b0dc9e6afcd5d8a443da6eb632952e692b83e8e7cbe7e1b22eeb0a9ce0c49e3bf6cf23ebbb4d93d24c2064c46f6ceb9daa6ca2e21702
@@ -261,13 +263,13 @@ class DiemSDKTests: XCTestCase {
 
         do {
             let seed = try DiemMnemonic.seed(mnemonic: mnemonic)
-            let wallet = try DiemHDWallet.init(seed: seed, depth: 0)
+            let wallet = try DiemHDWallet.init(seed: seed, depth: 0, network: .testnet)
             let walletAddress = wallet.publicKey.toLegacy()
-            let active = wallet.publicKey.toActive()
+            let active = wallet.publicKey.toAuthKeyPrefix()
             print(walletAddress, active)
             // 拼接交易
             let argument0 = DiemTransactionArgument.init(code: .Address("2da8e2146b015a5986138312baafbc61"))
-            let argument1 = DiemTransactionArgument.init(code: .U64("\(9000_000_000)"))
+            let argument1 = DiemTransactionArgument.init(code: .U64(9000_000_000))
 //            // metadata
 //            let argument2 = LibraTransactionArgument.init(code: .U8Vector("10".data(using: .utf8)!))
 //            // metadata_signature
@@ -288,7 +290,7 @@ class DiemSDKTests: XCTestCase {
                                                           payload: transactionPayload,
                                                           module: "Coin1",
                                                           chainID: 2)
-            let signature = try wallet.privateKey.signTransaction(transaction: rawTransaction, wallet: wallet)
+            let signature = try wallet.buildTransaction(transaction: rawTransaction)
             print(signature.toHexString())
         } catch {
             print(error.localizedDescription)
@@ -301,7 +303,7 @@ class DiemSDKTests: XCTestCase {
         //b90148b7d177538c2f91c9a13d695506 f41799563e5381b693d0885b56ebf19b
         do {
             let seed = try DiemMnemonic.seed(mnemonic: mnemonic)
-            let wallet = try DiemHDWallet.init(seed: seed, depth: 0)
+            let wallet = try DiemHDWallet.init(seed: seed, depth: 0, network: .testnet)
             var result = Data()
             result += "10".data(using: .utf8)!
             
@@ -332,9 +334,9 @@ class DiemSDKTests: XCTestCase {
 
         do {
             let seed = try DiemMnemonic.seed(mnemonic: mnemonic)
-            let wallet = try DiemHDWallet.init(seed: seed, depth: 0)
+            let wallet = try DiemHDWallet.init(seed: seed, depth: 0, network: .testnet)
             let walletAddress = wallet.publicKey.toLegacy()
-            let active = wallet.publicKey.toActive()
+            let active = wallet.publicKey.toAuthKeyPrefix()
             print(walletAddress, active)
             let argument0 = DiemTransactionArgument.init(code: .U8Vector("www.google.com".data(using: .utf8)!))
             let argument1 = DiemTransactionArgument.init(code: .U8Vector(wallet.publicKey.raw))
@@ -351,7 +353,7 @@ class DiemSDKTests: XCTestCase {
                                                            payload: transactionPayload,
                                                            module: "Coin1",
                                                            chainID: 2)
-            let signature = try wallet.privateKey.signTransaction(transaction: rawTransaction, wallet: wallet)
+            let signature = wallet.buildTransaction(transaction: rawTransaction)
             print(signature.toHexString())
         } catch {
             print(error.localizedDescription)
@@ -377,20 +379,18 @@ class DiemSDKTests: XCTestCase {
         }
     }
     func testLibraKitBech32Address() {
-        let mnemonic = ["wrist", "post", "hover", "mixed", "like", "update", "salute", "access", "venture", "grant", "another", "team"]
-        do {
-            let seed = try DiemMnemonic.seed(mnemonic: mnemonic)
-            let wallet = try DiemHDWallet.init(seed: seed, depth: 0)
-            print(wallet.publicKey.toQRAddress())
-            print(wallet.publicKey.toQRAddress(rootAccount: true))
-            let (prifix, hahah) = try DiemBech32.decode(wallet.publicKey.toQRAddress(),
-                                                          version: 1,
-                                                          separator: "1")
-            XCTAssertEqual(prifix, "lbr")
-            XCTAssertEqual(hahah.dropLast(8).toHexString(), "3bfb3f8051721b8140631d862a637b2d")
-        } catch {
-            XCTFail()
-        }
+//        let mnemonic = ["wrist", "post", "hover", "mixed", "like", "update", "salute", "access", "venture", "grant", "another", "team"]
+//        do {
+//            let seed = try DiemMnemonic.seed(mnemonic: mnemonic)
+//            let wallet = try DiemHDWallet.init(seed: seed, depth: 0, network: .testnet)
+//            let (prifix, hahah) = try DiemBech32.decode(wallet.publicKey.toQRAddress(),
+//                                                          version: 1,
+//                                                          separator: "1")
+//            XCTAssertEqual(prifix, "lbr")
+//            XCTAssertEqual(hahah.dropLast(8).toHexString(), "f41799563e5381b693d0885b56ebf19b")
+//        } catch {
+//            XCTFail()
+//        }
     }
     func testDecode() {
         do {
@@ -431,6 +431,28 @@ class DiemSDKTests: XCTestCase {
         print(tempMetadata)
         
         XCTAssertEqual(tempMetadata, "01000001088f8b82153010a1bd00")
+    }
+    func testUnstructuredBytesMetadata() {
+        let unstruct = DiemUnstructuredBytesMetadata.init(code: "abcd".data(using: .utf8)!)
+        let metadata = DiemMetadata.init(code: DiemMetadataTypes.UnstructuredBytesMetadata(unstruct))
+        
+        print(metadata.serialize().toHexString())
+        XCTAssertEqual(metadata.serialize().toHexString(), "03010461626364")
+    }
+    func testRefundMetadata() {
+        let refund = DiemRefundMetadata.init(code: .RefundMetadataV0(DiemRefundMetadataV0.init(transaction_version: 12343,
+                                                                                               reason: .UserInitiatedFullRefund)))
+        let metadata = DiemMetadata.init(code: DiemMetadataTypes.RefundMetadata(refund))
+        
+        print(metadata.serialize().toHexString())
+        XCTAssertEqual(metadata.serialize().toHexString(), "0400373000000000000003")
+    }
+    func testCoinTradeMetadata() {
+        let coinTrade = DiemCoinTradeMetadata.init(code: DiemCoinTradeMetadataTypes.CoinTradeMetadataV0(DiemCoinTradeMetadataV0.init(trade_ids: ["abc", "efg"])))
+        let metadata = DiemMetadata.init(code: DiemMetadataTypes.CoinTradeMetadata(coinTrade))
+        
+        print(metadata.serialize().toHexString())
+        XCTAssertEqual(metadata.serialize().toHexString(), "0500020361626303656667")
     }
     func testMetaDataFromToSubAddress() {
         let fromSubAddress = "8f8b82153010a1bd"
@@ -480,11 +502,11 @@ class DiemSDKTests: XCTestCase {
         let mnemonic = ["wrist", "post", "hover", "mixed", "like", "update", "salute", "access", "venture", "grant", "another", "team"]
         do {
             let seed = try DiemMnemonic.seed(mnemonic: mnemonic)
-            let wallet = try DiemHDWallet.init(seed: seed, depth: 0)
+            let wallet = try DiemHDWallet.init(seed: seed, depth: 0, network: .testnet)
             let walletAddress = wallet.publicKey.toLegacy()
             // 拼接交易
             let argument0 = DiemTransactionArgument.init(code: .Address("46147770d00885b622e2ccfd56e0583f"))
-            let argument1 = DiemTransactionArgument.init(code: .U64("\(11000000)"))
+            let argument1 = DiemTransactionArgument.init(code: .U64(11000000))
             
             let fromSubAddress = ""
             let toSubAddress = "b990f3550ab6da64"
@@ -509,7 +531,7 @@ class DiemSDKTests: XCTestCase {
                                                           payload: transactionPayload,
                                                           module: "Coin1",
                                                           chainID: 2)
-            let signature = try wallet.privateKey.signTransaction(transaction: rawTransaction, wallet: wallet)
+            let signature = wallet.buildTransaction(transaction: rawTransaction)
             print(signature.toHexString())
         } catch {
             

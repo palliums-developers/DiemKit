@@ -29,12 +29,6 @@
 		3663529E2591E040007D85BF /* DiemMultiPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352772591E040007D85BF /* DiemMultiPublicKey.swift */; };
 		3663529F2591E040007D85BF /* DiemMultiPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352782591E040007D85BF /* DiemMultiPrivateKey.swift */; };
 		366352A02591E040007D85BF /* DiemContracts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 366352792591E040007D85BF /* DiemContracts.bundle */; };
-		366352A12591E040007D85BF /* DiemMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663527B2591E040007D85BF /* DiemMetadata.swift */; };
-		366352A22591E040007D85BF /* DiemTravelRuleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663527D2591E040007D85BF /* DiemTravelRuleMetadata.swift */; };
-		366352A32591E040007D85BF /* DiemTravelRuleMetadataV0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3663527E2591E040007D85BF /* DiemTravelRuleMetadataV0.swift */; };
-		366352A42591E040007D85BF /* DiemUnstructuredBytesMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352802591E040007D85BF /* DiemUnstructuredBytesMetadata.swift */; };
-		366352A52591E040007D85BF /* DiemGeneralMetadataV0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352822591E040007D85BF /* DiemGeneralMetadataV0.swift */; };
-		366352A62591E040007D85BF /* DiemGeneralMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352832591E040007D85BF /* DiemGeneralMetadata.swift */; };
 		366352A72591E040007D85BF /* DiemRawTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352852591E040007D85BF /* DiemRawTransaction.swift */; };
 		366352A82591E040007D85BF /* DiemTransactionModulePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352872591E040007D85BF /* DiemTransactionModulePayload.swift */; };
 		366352A92591E040007D85BF /* DiemTypeTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352892591E040007D85BF /* DiemTypeTag.swift */; };
@@ -48,6 +42,16 @@
 		366352B12591E040007D85BF /* DiemTransactionPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352922591E040007D85BF /* DiemTransactionPayload.swift */; };
 		366352B22591E040007D85BF /* DiemCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366352932591E040007D85BF /* DiemCommon.swift */; };
 		369D3CA42451CE4E00D7D10E /* DiemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369D3CA32451CE4E00D7D10E /* DiemManager.swift */; };
+		36A363132616FB3800E90377 /* DiemMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A363042616FB3700E90377 /* DiemMetadata.swift */; };
+		36A363142616FB3800E90377 /* DiemTravelRuleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A363062616FB3700E90377 /* DiemTravelRuleMetadata.swift */; };
+		36A363152616FB3800E90377 /* DiemTravelRuleMetadataV0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A363072616FB3700E90377 /* DiemTravelRuleMetadataV0.swift */; };
+		36A363162616FB3800E90377 /* DiemUnstructuredBytesMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A363092616FB3700E90377 /* DiemUnstructuredBytesMetadata.swift */; };
+		36A363172616FB3800E90377 /* DiemRefundMetadataV0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3630B2616FB3700E90377 /* DiemRefundMetadataV0.swift */; };
+		36A363182616FB3800E90377 /* DiemRefundMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3630C2616FB3700E90377 /* DiemRefundMetadata.swift */; };
+		36A363192616FB3800E90377 /* DiemCoinTradeMetadataV0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3630E2616FB3700E90377 /* DiemCoinTradeMetadataV0.swift */; };
+		36A3631A2616FB3800E90377 /* DiemCoinTradeMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3630F2616FB3700E90377 /* DiemCoinTradeMetadata.swift */; };
+		36A3631B2616FB3800E90377 /* DiemGeneralMetadataV0.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A363112616FB3700E90377 /* DiemGeneralMetadataV0.swift */; };
+		36A3631C2616FB3800E90377 /* DiemGeneralMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A363122616FB3700E90377 /* DiemGeneralMetadata.swift */; };
 		36C190C625E655FB00EFA4D1 /* ViolasAccountMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C190C525E655FB00EFA4D1 /* ViolasAccountMainModel.swift */; };
 		9D25F70F2338D01200C6D256 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D25F70E2338D01200C6D256 /* SwiftUIView.swift */; };
 		9D96752B2333572800710B21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D96752A2333572800710B21 /* AppDelegate.swift */; };
@@ -99,12 +103,6 @@
 		366352772591E040007D85BF /* DiemMultiPublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemMultiPublicKey.swift; sourceTree = "<group>"; };
 		366352782591E040007D85BF /* DiemMultiPrivateKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemMultiPrivateKey.swift; sourceTree = "<group>"; };
 		366352792591E040007D85BF /* DiemContracts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DiemContracts.bundle; sourceTree = "<group>"; };
-		3663527B2591E040007D85BF /* DiemMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemMetadata.swift; sourceTree = "<group>"; };
-		3663527D2591E040007D85BF /* DiemTravelRuleMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTravelRuleMetadata.swift; sourceTree = "<group>"; };
-		3663527E2591E040007D85BF /* DiemTravelRuleMetadataV0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTravelRuleMetadataV0.swift; sourceTree = "<group>"; };
-		366352802591E040007D85BF /* DiemUnstructuredBytesMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemUnstructuredBytesMetadata.swift; sourceTree = "<group>"; };
-		366352822591E040007D85BF /* DiemGeneralMetadataV0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemGeneralMetadataV0.swift; sourceTree = "<group>"; };
-		366352832591E040007D85BF /* DiemGeneralMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemGeneralMetadata.swift; sourceTree = "<group>"; };
 		366352852591E040007D85BF /* DiemRawTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemRawTransaction.swift; sourceTree = "<group>"; };
 		366352872591E040007D85BF /* DiemTransactionModulePayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTransactionModulePayload.swift; sourceTree = "<group>"; };
 		366352892591E040007D85BF /* DiemTypeTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTypeTag.swift; sourceTree = "<group>"; };
@@ -118,6 +116,16 @@
 		366352922591E040007D85BF /* DiemTransactionPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTransactionPayload.swift; sourceTree = "<group>"; };
 		366352932591E040007D85BF /* DiemCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemCommon.swift; sourceTree = "<group>"; };
 		369D3CA32451CE4E00D7D10E /* DiemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiemManager.swift; sourceTree = "<group>"; };
+		36A363042616FB3700E90377 /* DiemMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemMetadata.swift; sourceTree = "<group>"; };
+		36A363062616FB3700E90377 /* DiemTravelRuleMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTravelRuleMetadata.swift; sourceTree = "<group>"; };
+		36A363072616FB3700E90377 /* DiemTravelRuleMetadataV0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemTravelRuleMetadataV0.swift; sourceTree = "<group>"; };
+		36A363092616FB3700E90377 /* DiemUnstructuredBytesMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemUnstructuredBytesMetadata.swift; sourceTree = "<group>"; };
+		36A3630B2616FB3700E90377 /* DiemRefundMetadataV0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemRefundMetadataV0.swift; sourceTree = "<group>"; };
+		36A3630C2616FB3700E90377 /* DiemRefundMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemRefundMetadata.swift; sourceTree = "<group>"; };
+		36A3630E2616FB3700E90377 /* DiemCoinTradeMetadataV0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemCoinTradeMetadataV0.swift; sourceTree = "<group>"; };
+		36A3630F2616FB3700E90377 /* DiemCoinTradeMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemCoinTradeMetadata.swift; sourceTree = "<group>"; };
+		36A363112616FB3700E90377 /* DiemGeneralMetadataV0.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemGeneralMetadataV0.swift; sourceTree = "<group>"; };
+		36A363122616FB3700E90377 /* DiemGeneralMetadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiemGeneralMetadata.swift; sourceTree = "<group>"; };
 		36C190C525E655FB00EFA4D1 /* ViolasAccountMainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViolasAccountMainModel.swift; sourceTree = "<group>"; };
 		59A5275ECA44D2B40D53D4C1 /* Pods-DiemKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiemKitTests.debug.xcconfig"; path = "Target Support Files/Pods-DiemKitTests/Pods-DiemKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6C8A6CAC67DA60AF8AE2B776 /* Pods-DiemKitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiemKitTests.release.xcconfig"; path = "Target Support Files/Pods-DiemKitTests/Pods-DiemKitTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,8 +203,8 @@
 			children = (
 				3663526E2591E040007D85BF /* DiemHDWallet */,
 				366352752591E040007D85BF /* DiemMultiHDWallet */,
-				3663527A2591E040007D85BF /* Metadata */,
 				366352842591E040007D85BF /* MakeTransaction */,
+				36A363032616FB3700E90377 /* Metadata */,
 				3663526B2591E040007D85BF /* DiemWordList.swift */,
 				3663526C2591E040007D85BF /* DiemUtils.swift */,
 				3663526D2591E040007D85BF /* DiemNetwork.swift */,
@@ -227,43 +235,6 @@
 				366352772591E040007D85BF /* DiemMultiPublicKey.swift */,
 			);
 			path = DiemMultiHDWallet;
-			sourceTree = "<group>";
-		};
-		3663527A2591E040007D85BF /* Metadata */ = {
-			isa = PBXGroup;
-			children = (
-				3663527B2591E040007D85BF /* DiemMetadata.swift */,
-				3663527C2591E040007D85BF /* LibraTravelRuleMetadata */,
-				3663527F2591E040007D85BF /* LibraUnstructuredBytesMetadata */,
-				366352812591E040007D85BF /* LibraGeneralMetadata */,
-			);
-			path = Metadata;
-			sourceTree = "<group>";
-		};
-		3663527C2591E040007D85BF /* LibraTravelRuleMetadata */ = {
-			isa = PBXGroup;
-			children = (
-				3663527D2591E040007D85BF /* DiemTravelRuleMetadata.swift */,
-				3663527E2591E040007D85BF /* DiemTravelRuleMetadataV0.swift */,
-			);
-			path = LibraTravelRuleMetadata;
-			sourceTree = "<group>";
-		};
-		3663527F2591E040007D85BF /* LibraUnstructuredBytesMetadata */ = {
-			isa = PBXGroup;
-			children = (
-				366352802591E040007D85BF /* DiemUnstructuredBytesMetadata.swift */,
-			);
-			path = LibraUnstructuredBytesMetadata;
-			sourceTree = "<group>";
-		};
-		366352812591E040007D85BF /* LibraGeneralMetadata */ = {
-			isa = PBXGroup;
-			children = (
-				366352822591E040007D85BF /* DiemGeneralMetadataV0.swift */,
-				366352832591E040007D85BF /* DiemGeneralMetadata.swift */,
-			);
-			path = LibraGeneralMetadata;
 			sourceTree = "<group>";
 		};
 		366352842591E040007D85BF /* MakeTransaction */ = {
@@ -306,6 +277,63 @@
 				366352912591E040007D85BF /* DiemAccessPath.swift */,
 			);
 			path = WriteSet;
+			sourceTree = "<group>";
+		};
+		36A363032616FB3700E90377 /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				36A363042616FB3700E90377 /* DiemMetadata.swift */,
+				36A363052616FB3700E90377 /* DiemTravelRuleMetadata */,
+				36A363082616FB3700E90377 /* DiemUnstructuredBytesMetadata */,
+				36A3630A2616FB3700E90377 /* DiemRefundMetadata */,
+				36A3630D2616FB3700E90377 /* DiemCoinTradeMetadata */,
+				36A363102616FB3700E90377 /* DiemGeneralMetadata */,
+			);
+			path = Metadata;
+			sourceTree = "<group>";
+		};
+		36A363052616FB3700E90377 /* DiemTravelRuleMetadata */ = {
+			isa = PBXGroup;
+			children = (
+				36A363062616FB3700E90377 /* DiemTravelRuleMetadata.swift */,
+				36A363072616FB3700E90377 /* DiemTravelRuleMetadataV0.swift */,
+			);
+			path = DiemTravelRuleMetadata;
+			sourceTree = "<group>";
+		};
+		36A363082616FB3700E90377 /* DiemUnstructuredBytesMetadata */ = {
+			isa = PBXGroup;
+			children = (
+				36A363092616FB3700E90377 /* DiemUnstructuredBytesMetadata.swift */,
+			);
+			path = DiemUnstructuredBytesMetadata;
+			sourceTree = "<group>";
+		};
+		36A3630A2616FB3700E90377 /* DiemRefundMetadata */ = {
+			isa = PBXGroup;
+			children = (
+				36A3630B2616FB3700E90377 /* DiemRefundMetadataV0.swift */,
+				36A3630C2616FB3700E90377 /* DiemRefundMetadata.swift */,
+			);
+			path = DiemRefundMetadata;
+			sourceTree = "<group>";
+		};
+		36A3630D2616FB3700E90377 /* DiemCoinTradeMetadata */ = {
+			isa = PBXGroup;
+			children = (
+				36A3630E2616FB3700E90377 /* DiemCoinTradeMetadataV0.swift */,
+				36A3630F2616FB3700E90377 /* DiemCoinTradeMetadata.swift */,
+			);
+			path = DiemCoinTradeMetadata;
+			sourceTree = "<group>";
+		};
+		36A363102616FB3700E90377 /* DiemGeneralMetadata */ = {
+			isa = PBXGroup;
+			children = (
+				36A363112616FB3700E90377 /* DiemGeneralMetadataV0.swift */,
+				36A363122616FB3700E90377 /* DiemGeneralMetadata.swift */,
+			);
+			path = DiemGeneralMetadata;
 			sourceTree = "<group>";
 		};
 		5086504818D0C2F89B7FE900 /* Frameworks */ = {
@@ -613,26 +641,29 @@
 			files = (
 				366352B12591E040007D85BF /* DiemTransactionPayload.swift in Sources */,
 				366352972591E040007D85BF /* DiemHDPrivateKey.swift in Sources */,
-				366352A32591E040007D85BF /* DiemTravelRuleMetadataV0.swift in Sources */,
-				366352A52591E040007D85BF /* DiemGeneralMetadataV0.swift in Sources */,
 				3663529C2591E040007D85BF /* DiemError.swift in Sources */,
 				366352992591E040007D85BF /* DiemHDWallet.swift in Sources */,
 				366352AB2591E040007D85BF /* DiemTransactionArgument.swift in Sources */,
 				366352AA2591E040007D85BF /* DiemTransactionScriptPayload.swift in Sources */,
 				366352A92591E040007D85BF /* DiemTypeTag.swift in Sources */,
+				36A363152616FB3800E90377 /* DiemTravelRuleMetadataV0.swift in Sources */,
 				3663529E2591E040007D85BF /* DiemMultiPublicKey.swift in Sources */,
-				366352A62591E040007D85BF /* DiemGeneralMetadata.swift in Sources */,
 				363D913524CAEF4300F6374C /* ed25519_sign.swift in Sources */,
 				366352982591E040007D85BF /* DiemHDPublicKey.swift in Sources */,
 				369D3CA42451CE4E00D7D10E /* DiemManager.swift in Sources */,
 				366352952591E040007D85BF /* DiemUtils.swift in Sources */,
 				3663529B2591E040007D85BF /* DiemMnemonic.swift in Sources */,
+				36A363182616FB3800E90377 /* DiemRefundMetadata.swift in Sources */,
 				366352B02591E040007D85BF /* DiemAccessPath.swift in Sources */,
+				36A363172616FB3800E90377 /* DiemRefundMetadataV0.swift in Sources */,
 				366352AE2591E040007D85BF /* DiemWriteSet.swift in Sources */,
 				9D96752D2333572800710B21 /* ViewController.swift in Sources */,
 				366352B22591E040007D85BF /* DiemCommon.swift in Sources */,
+				36A363132616FB3800E90377 /* DiemMetadata.swift in Sources */,
+				36A3631C2616FB3800E90377 /* DiemGeneralMetadata.swift in Sources */,
+				36A363142616FB3800E90377 /* DiemTravelRuleMetadata.swift in Sources */,
+				36A3631B2616FB3800E90377 /* DiemGeneralMetadataV0.swift in Sources */,
 				366352AF2591E040007D85BF /* DiemContractEvent.swift in Sources */,
-				366352A42591E040007D85BF /* DiemUnstructuredBytesMetadata.swift in Sources */,
 				3663529D2591E040007D85BF /* DiemMultiHDWallet.swift in Sources */,
 				363D913324CAEF4300F6374C /* ed25519_fe.swift in Sources */,
 				3663529F2591E040007D85BF /* DiemMultiPrivateKey.swift in Sources */,
@@ -641,6 +672,7 @@
 				366352AD2591E040007D85BF /* DiemTransactionWriteSetPayload.swift in Sources */,
 				363D913424CAEF4300F6374C /* ed25519_verify.swift in Sources */,
 				366352942591E040007D85BF /* DiemWordList.swift in Sources */,
+				36A3631A2616FB3800E90377 /* DiemCoinTradeMetadata.swift in Sources */,
 				363D913724CAEF4300F6374C /* ed25519_utility.swift in Sources */,
 				363D913824CAEF4300F6374C /* ed25519_sc.swift in Sources */,
 				366352AC2591E040007D85BF /* DiemStructTag.swift in Sources */,
@@ -648,10 +680,10 @@
 				366352A82591E040007D85BF /* DiemTransactionModulePayload.swift in Sources */,
 				36C190C625E655FB00EFA4D1 /* ViolasAccountMainModel.swift in Sources */,
 				9D96752B2333572800710B21 /* AppDelegate.swift in Sources */,
-				366352A22591E040007D85BF /* DiemTravelRuleMetadata.swift in Sources */,
-				366352A12591E040007D85BF /* DiemMetadata.swift in Sources */,
 				9D25F70F2338D01200C6D256 /* SwiftUIView.swift in Sources */,
+				36A363162616FB3800E90377 /* DiemUnstructuredBytesMetadata.swift in Sources */,
 				366352A72591E040007D85BF /* DiemRawTransaction.swift in Sources */,
+				36A363192616FB3800E90377 /* DiemCoinTradeMetadataV0.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
