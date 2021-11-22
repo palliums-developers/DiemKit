@@ -6,8 +6,10 @@
 //  Copyright © 2020 palliums. All rights reserved.
 //
 
+import UIKit
 import CryptoSwift
 import BigInt
+
 struct DiemMultiPublicKeyModel {
     var raw: Data
     var sequence: Int

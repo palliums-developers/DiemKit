@@ -5,6 +5,7 @@
 //  Created by wangyingdong on 2020/4/7.
 //  Copyright © 2020 palliums. All rights reserved.
 //
+import UIKit
 import CryptoSwift
 import BigInt
 
