@@ -11,4 +11,4 @@ import UIKit
 /// Libra签名盐
 let DiemSignSalt  = "DIEM::RawTransaction"
 /// LIbra计算助记词盐
-let DiemMnemonicSalt = "DIEM WALLET: mnemonic salt prefix$DIEM"
+let DiemMnemonicSaltPrefix = "DIEM WALLET: mnemonic salt prefix$DIEM"

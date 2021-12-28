@@ -11,6 +11,7 @@ enum transactionPayload {
     case writeSet(DiemTransactionWriteSetPayload)
     case script(DiemTransactionScriptPayload)
     case module(DiemTransactionModulePayload)
+    case scriptFunction(DiemTransactionScriptFunctionPayload)
 }
 extension transactionPayload {
     public var raw: Data {
@@ -21,6 +22,8 @@ extension transactionPayload {
             return Data.init(Array<UInt8>(hex: "01"))
         case .module:
             return Data.init(Array<UInt8>(hex: "02"))
+        case .scriptFunction:
+            return Data.init(Array<UInt8>(hex: "03"))
         }
     }
 }
@@ -40,6 +43,8 @@ struct DiemTransactionPayload {
         case .script(let script):
             result += script.serialize()
         case .module(let module):
+            result += module.serialize()
+        case .scriptFunction(let module):
             result += module.serialize()
         }
         return result
