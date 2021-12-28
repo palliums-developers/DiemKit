@@ -579,4 +579,46 @@ class DiemSDKTests: XCTestCase {
         let bb = DiemUtils.uleb128FormatToInt(data: Data.init(hex: "b415"))
         print(bb)
     }
+    func testScriptFunction() {
+        let testData: Array<UInt8> = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 27, 83, 121, 115, 116, 101, 109, 65, 100, 109, 105, 110, 105, 115, 116, 114, 97, 116, 105, 111, 110, 83, 99, 114, 105, 112, 116, 115, 4, 116, 101, 115, 116, 3, 3, 0, 0, 3, 8, 123, 0, 0, 0, 0, 0, 0, 0, 8, 65, 1, 0, 0, 0, 0, 0, 0, 8, 231, 0, 0, 0, 0, 0, 0, 0]
+
+        let address: Array<UInt8> = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+        let a = DiemTransactionScriptFunctionPayload.init(module: DiemModuleId.init(address: Data.init(address).toHexString(),
+                                                                                    name: "SystemAdministrationScripts"),
+                                                          function: "test",
+                                                          typeTags: [DiemTypeTag.init(typeTag: DiemTypeTags.Bool(false)),
+                                                                     DiemTypeTag.init(typeTag: DiemTypeTags.Bool(false)),
+                                                                     DiemTypeTag.init(typeTag: DiemTypeTags.Bool(false)),
+                                                                     DiemTypeTag.init(typeTag: DiemTypeTags.Bool(false))],
+                                                          argruments: [DiemUtils.getLengthData(length: 123, appendBytesCount: 8), DiemUtils.getLengthData(length: 321, appendBytesCount: 8), DiemUtils.getLengthData(length: 231, appendBytesCount: 8)])
+        print(a.serialize().toHexString())
+        print(Data.init(testData).toHexString())
+        XCTAssertEqual(a.serialize().toHexString().lowercased(),
+                       Data.init(testData).toHexString())
+        //000000000000000000000000000000011b53797374656d41646d696e697374726174696f6e536372697074730474657374
+//        04
+//        0000
+//        0000
+//        0000
+//        0000
+//        03
+//        087b0000000000000008410100000000000008e700000000000000
+        //000000000000000000000000000000011b53797374656d41646d696e697374726174696f6e536372697074730474657374
+//        04
+//        00
+//        00
+//        00
+//        00
+//        03
+//        087b0000000000000008410100000000000008e700000000000000
+        //000000000000000000000000000000011b53797374656d41646d696e697374726174696f6e536372697074730474657374
+//        03
+//        06
+//        01
+//        00
+//        00
+//        03
+//        087b0000000000000008410100000000000008e700000000000000
+
+    }
 }
