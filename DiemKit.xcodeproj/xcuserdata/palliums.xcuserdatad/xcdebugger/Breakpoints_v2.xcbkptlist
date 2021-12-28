@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "44FF321C-1C50-4DF3-B4F5-BC1D0084353B"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C815FB0B-692E-4CA3-83E5-4AD7549717BA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DiemKitTests/DiemKitTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "596"
+            endingLineNumber = "596"
+            landmarkName = "testScriptFunction()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C815FB0B-692E-4CA3-83E5-4AD7549717BA - b0c0c232db01a071"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DiemKitTests.DiemSDKTests.testScriptFunction() -&gt; ()"
+                  moduleName = "DiemKitTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/palliums/Desktop/%E6%9F%8F%E9%93%BE/Diem/DiemKit/DiemKitTests/DiemKitTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "596"
+                  endingLineNumber = "596"
+                  offsetFromSymbolStart = "2500">
+               </Location>
+               <Location
+                  uuid = "C815FB0B-692E-4CA3-83E5-4AD7549717BA - b0c0c232db01a071"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DiemKitTests.DiemSDKTests.testScriptFunction() -&gt; ()"
+                  moduleName = "DiemKitTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/palliums/Desktop/%E6%9F%8F%E9%93%BE/Diem/DiemKit/DiemKitTests/DiemKitTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "596"
+                  endingLineNumber = "596"
+                  offsetFromSymbolStart = "2496">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
